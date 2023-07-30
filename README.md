@@ -24,3 +24,4 @@ If you for whatever reason desire to, you can use my [binpkg host](https://genca
         - A working `app-arch/zstd` installation is required
 
 This is used by me to not compile packages such as Librewolf or LLVM on a `x86-64-v3` compatible laptop.
+Note that packages are not GPG signed despite using `gpkg`, due to a bug in either GPG or Portage about file access to the key file, that I could not solve.
