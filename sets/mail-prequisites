@@ -1,0 +1,7 @@
+app-antivirus/clamav
+dev-db/mariadb
+mail-client/roundcube
+mail-filter/amavisd-new
+mail-filter/spamassassin
+net-mail/dovecot
+www-apps/postfixadmin
