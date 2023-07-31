@@ -1,0 +1,1 @@
+Credits for the original `hyprland-9999` ebuild go to author Aisha Tammy, their original ebuild is [here](https://github.com/gentoo-mirror/wayland-desktop/blob/master/gui-wm/hyprland/hyprland-9999.ebuild)
