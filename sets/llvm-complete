@@ -2,9 +2,11 @@ sys-devel/lld
 sys-devel/lld-toolchain-symlinks
 
 sys-devel/llvm
+sys-devel/llvm-common
 sys-devel/llvm-toolchain-symlinks
 
 sys-devel/clang
+sys-devel/clang-common
 sys-devel/clang-toolchain-symlinks
 
 sys-libs/libcxx
