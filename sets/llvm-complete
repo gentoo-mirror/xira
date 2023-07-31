@@ -1,0 +1,14 @@
+sys-devel/lld
+sys-devel/lld-toolchain-symlinks
+
+sys-devel/llvm
+sys-devel/llvm-toolchain-symlinks
+
+sys-devel/clang
+sys-devel/clang-toolchain-symlinks
+
+sys-libs/libcxx
+sys-libs/libcxxabi
+
+sys-libs/compiler-rt
+sys-libs/llvm-libunwind
