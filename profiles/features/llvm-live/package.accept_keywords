@@ -4,6 +4,7 @@ sys-devel/lld-toolchain-symlinks    **
 sys-devel/llvm                      **
 sys-devel/llvm-common               **
 sys-devel/llvm-toolchain-symlinks   **
+sys-devel/llvmgold                  **
 
 sys-devel/clang                     **
 sys-devel/clang-common              **
