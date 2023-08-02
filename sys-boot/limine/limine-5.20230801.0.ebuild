@@ -14,7 +14,7 @@ LICENSE="BSD-2"
 SLOT="0"
 IUSE="-gnu +bios +bios-pxe +bios-cd +cd-efi +uefi32 +uefi64 -uefiaa64 custom-cflags clang"
 
-MY_LLVM_TARGETS="AArch ARM X86"
+MY_LLVM_TARGETS="AArch64 ARM X86"
 MY_LLVM_FLAGS="llvm_targets_${MY_LLVM_TARGETS// /(-),llvm_targets_}(-)"
 
 BDEPEND="
