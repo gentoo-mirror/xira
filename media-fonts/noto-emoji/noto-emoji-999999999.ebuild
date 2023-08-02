@@ -23,7 +23,7 @@ FONT_CONF=(
 
 get() {
 	if hash curl 2>/dev/null; then
-		curl -Lf --retry 3 --connect-timeout 30 --speed-limit 300 --speed-time 10 "$@"
+		curl -Lf --retry 3 --connect-timeout 30 --speed-limit 300 --speed-time 10 -O "$@"
 	elif hash wget 2>/dev/null; then
 		wget -O- "$@"
 	else
@@ -32,13 +32,12 @@ get() {
 }
 
 src_unpack() {
-	get https://fonts.google.com/download?family=Noto%20Color%20Emoji > Noto_Color_Emoji.zip || die
-	unzip Noto_Color_Emoji.zip NotoColorEmoji-Regular.ttf || die
+	get https://github.com/googlefonts/noto-emoji/raw/main/fonts/NotoColorEmoji.ttf || die
 }
 
 src_install() {
 	mkdir noto-emoji || die
-	mv NotoColorEmoji-Regular.ttf noto-emoji/ || die
+	mv NotoColorEmoji.ttf noto-emoji/ || die
 
 	FONT_S="${S}/noto-emoji" font_src_install
 }
