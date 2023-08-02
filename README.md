@@ -1,6 +1,9 @@
 # >> KRXT :: portlay
 ~ An LLVM-centric Portage overlay, with focus on live ebuilds ~
 
+## Why?
+Mostly to learn, and because I like using bleeding-edge software :3 ~~then crying when it doesn't work~~
+
 ### Binary cache/host
 If you for whatever reason desire to, you can use my [binpkg host](https://gencache.krxt.dev/). Information about system information below:
 
