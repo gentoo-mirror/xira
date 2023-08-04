@@ -34,7 +34,6 @@ src_unpack() {
 	if [[ ${PV} == 9999 ]]; then
 		git-r3_src_unpack
 		eapply "${FILESDIR}/rustc-1.71-deps.patch" && cargo_live_src_unpack
-		cargo_live_src_unpack
 	else
 		eapply "${FILESDIR}/rustc-1.71-deps.patch" && cargo_src_unpack
 	fi
