@@ -7,6 +7,7 @@ inherit cargo
 
 DESCRIPTION="Blazingly fast colorscheme generator for Neovim, written in Rust"
 HOMEPAGE="https://github.com/LunarVim/colorgen-nvim/"
+
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/LunarVim/colorgen-nvim"

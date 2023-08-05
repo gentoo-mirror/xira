@@ -14,7 +14,7 @@ if [[ ${PV} == 9999 ]]; then
 else
 	SRC_URI="
 		https://github.com/elves/elvish/archive/v${PV}.tar.gz -> ${P}.tar.gz
-		https://dist.krxt.dev/app-shells/elvish/elvish-${PV}-vendor.tar.xz"
+		https://dist.krxt.dev/app-shells/${PN}/${P}-vendor.tar.xz"
 	S="${WORKDIR}/${P}"
 	KEYWORDS="~amd64"
 fi
@@ -26,11 +26,11 @@ RESTRICT="test"
 
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then
-		git-r3_src_unpack
-		go-module_live_vendor
-		go-module_src_unpack
+		git-r3_src_unpack		|| die
+		go-module_live_vendor	|| die
+		go-module_src_unpack	|| die
 	else
-		go-module_src_unpack
+		go-module_src_unpack	|| die
 	fi
 }
 

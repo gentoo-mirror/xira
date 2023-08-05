@@ -1,0 +1,27 @@
+[Unit]
+Description=Dendrite (Matrix Homeserver, SQLite)
+After=network-online.target
+
+[Service]
+User=dendrite
+Group=dendrite
+
+###################################################
+# You can configure DENDRITE_{OPTS,WORKDIR} in
+# /etc/systemd/system/dendrite.service.d/override.conf
+# As an example, the conf would look as follows:
+##---------------------------------------------------------------------
+# [Service]
+# Environment="DENDRITE_OPTS=-config=/home/larry/.config/dendrite.yaml"
+# Environment="DENDRITE_WORKDIR=/home/larry/.local/lib/dendrite"
+##---------------------------------------------------------------------
+# Default values are provided below.
+###################################################
+
+Environment="DENDRITE_OPTS=-config=/etc/dendrite/dendrite.yaml"
+Environment="DENDRITE_WORKDIR=/var/lib/dendrite"
+ExecStart=/usr/bin/dendrite $DENDRITE_OPTS
+WorkingDirectory=$DENDRITE_WORKDIR
+
+[Install]
+WantedBy=multi-user.target
