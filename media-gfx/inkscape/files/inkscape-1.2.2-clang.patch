@@ -1,0 +1,78 @@
+diff --git a/src/device-manager.cpp b/src/device-manager.cpp
+index e9841a3..d255a5b 100644
+--- a/src/device-manager.cpp
++++ b/src/device-manager.cpp
+@@ -201,7 +201,7 @@ private:
+     guint liveButtons;
+ };
+ 
+-class IdMatcher : public std::unary_function<Glib::RefPtr<InputDeviceImpl>&, bool> {
++class IdMatcher : public std::function<bool(const Glib::RefPtr<InputDeviceImpl>&)> {
+ public:
+     IdMatcher(Glib::ustring const& target):target(target) {}
+     bool operator ()(Glib::RefPtr<InputDeviceImpl>& dev) {return dev && (target == dev->getId());}
+@@ -210,7 +210,7 @@ private:
+     Glib::ustring const& target;
+ };
+ 
+-class LinkMatcher : public std::unary_function<Glib::RefPtr<InputDeviceImpl>&, bool> {
++class LinkMatcher : public std::function<bool(const Glib::RefPtr<InputDeviceImpl>&)> {
+ public:
+     LinkMatcher(Glib::ustring const& target):target(target) {}
+     bool operator ()(Glib::RefPtr<InputDeviceImpl>& dev) {return dev && (target == dev->getLink());}
+diff --git a/src/libnrtype/FontFactory.h b/src/libnrtype/FontFactory.h
+index e3bf1d2..96e9ba6 100644
+--- a/src/libnrtype/FontFactory.h
++++ b/src/libnrtype/FontFactory.h
+@@ -46,10 +46,10 @@ namespace Glib
+ 
+ // the font_factory keeps a hashmap of all the loaded font_instances, and uses the PangoFontDescription
+ // as index (nota: since pango already does that, using the PangoFont could work too)
+-struct font_descr_hash : public std::unary_function<PangoFontDescription*,size_t> {
++struct font_descr_hash : public std::function<PangoFontDescription*(size_t)> {
+     size_t operator()(PangoFontDescription *const &x) const;
+ };
+-struct font_descr_equal : public std::binary_function<PangoFontDescription*, PangoFontDescription*, bool> {
++struct font_descr_equal : public std::function<PangoFontDescription*(PangoFontDescription*, bool)> {
+     bool operator()(PangoFontDescription *const &a, PangoFontDescription *const &b) const;
+ };
+ 
+diff --git a/src/ui/dialog/undo-history.h b/src/ui/dialog/undo-history.h
+index 0b69693..13f1fe1 100644
+--- a/src/ui/dialog/undo-history.h
++++ b/src/ui/dialog/undo-history.h
+@@ -63,7 +63,7 @@ private:
+ class CellRendererInt : public Gtk::CellRendererText {
+ public:
+ 
+-    struct Filter : std::unary_function<int, bool> {
++    struct Filter : std::function<int(bool)> {
+         virtual ~Filter() = default;
+         virtual bool operator() (const int&) const =0;
+     };
+diff --git a/src/ui/tool/multi-path-manipulator.cpp b/src/ui/tool/multi-path-manipulator.cpp
+index c3bf969..28b0837 100644
+--- a/src/ui/tool/multi-path-manipulator.cpp
++++ b/src/ui/tool/multi-path-manipulator.cpp
+@@ -38,7 +38,7 @@ namespace UI {
+ namespace {
+ 
+ struct hash_nodelist_iterator
+-    : public std::unary_function<NodeList::iterator, std::size_t>
++    : public std::function<NodeList::iterator(std::size_t)>
+ {
+     std::size_t operator()(NodeList::iterator i) const {
+         return std::hash<NodeList::iterator::pointer>()(&*i);
+diff --git a/src/util/units.h b/src/util/units.h
+index c271ec5..c12a90b 100644
+--- a/src/util/units.h
++++ b/src/util/units.h
+@@ -26,7 +26,7 @@
+ 
+ namespace std {
+ template <>
+-struct hash<Glib::ustring> : public std::unary_function<Glib::ustring, std::size_t> {
++struct hash<Glib::ustring> : public std::function<Glib::ustring(std::size_t)> {
+     std::size_t operator()(Glib::ustring const &s) const {
+         return hash<std::string>()(s.raw());
+     }
