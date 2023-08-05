@@ -1,6 +1,11 @@
 # >> KRXT :: portlay
 ~ An LLVM-centric Portage overlay, with focus on live ebuilds ~
 
+## License info
+Every ebuild I wrote here is licensed under ISC.
+Ebuilds I have copied from e.g. the main repository preserve their original GPLv2 header and authors.
+I am not a legal expert. As far as I understand ISC is GPLv2 compatible, but if there are any issues, please message me [here](https://to.stylism.moe/#/@revelation:stylism.moe/), or make an issue on GitHub/Codeberg.
+
 ## ⚠️ Experimentalism ahead ⚠️
 I don't advise you using this overlay, unless you want to or are using one of the LLVM profiles provided by the Gentoo repository or my modified ones.
 
