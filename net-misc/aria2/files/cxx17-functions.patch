@@ -1,0 +1,52 @@
+diff --git a/src/ConsoleStatCalc.h b/src/ConsoleStatCalc.h
+index 3940ef0..661f543 100644
+--- a/src/ConsoleStatCalc.h
++++ b/src/ConsoleStatCalc.h
+@@ -45,7 +45,7 @@
+ 
+ namespace aria2 {
+ 
+-class SizeFormatter : public std::unary_function<int64_t, std::string> {
++class SizeFormatter : public std::function<int64_t(std::string)> {
+ protected:
+   virtual std::string format(int64_t size) const = 0;
+ 
+diff --git a/src/CookieStorage.cc b/src/CookieStorage.cc
+index 56db33e..0d7e964 100644
+--- a/src/CookieStorage.cc
++++ b/src/CookieStorage.cc
+@@ -352,7 +352,7 @@ public:
+ } // namespace
+ 
+ namespace {
+-class OrderByPathDepthDesc : public std::binary_function<Cookie, Cookie, bool> {
++class OrderByPathDepthDesc : public std::function<Cookie(Cookie, bool)> {
+ public:
+   bool operator()(const CookiePathDivider& lhs,
+                   const CookiePathDivider& rhs) const
+diff --git a/src/MetalinkEntry.cc b/src/MetalinkEntry.cc
+index 3567f06..6ac95ef 100644
+--- a/src/MetalinkEntry.cc
++++ b/src/MetalinkEntry.cc
+@@ -103,7 +103,7 @@ void MetalinkEntry::reorderMetaurlsByPriority()
+ 
+ namespace {
+ class Supported
+-    : public std::unary_function<std::shared_ptr<MetalinkResource>, bool> {
++    : public std::function<bool(const std::shared_ptr<MetalinkResource>)> {
+ public:
+   bool operator()(const std::shared_ptr<MetalinkResource>& res) const
+   {
+diff --git a/src/a2functional.h b/src/a2functional.h
+index c1059fe..c7e65a1 100644
+--- a/src/a2functional.h
++++ b/src/a2functional.h
+@@ -103,7 +103,7 @@ std::string strjoin(InputIterator first, InputIterator last,
+ }
+ 
+ template <typename T>
+-class LeastRecentAccess : public std::binary_function<T, T, bool> {
++class LeastRecentAccess : public std::function<T(T, bool)> {
+ public:
+   bool operator()(const std::shared_ptr<T>& lhs,
+                   const std::shared_ptr<T>& rhs) const
