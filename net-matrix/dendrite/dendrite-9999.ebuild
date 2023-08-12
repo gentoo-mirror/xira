@@ -53,8 +53,8 @@ pkg_setup() {
 	ewarn
 	ewarn "No OpenRC support for now, only"
 	ewarn "a systemd unit is provided."
-	ewarn "If you require it, please contact"
-	ewarn "the package maintainer."
+	ewarn "If you require OpenRC scripts,"
+	ewarn "please contact the package maintainer."
 	ewarn
 }
 
