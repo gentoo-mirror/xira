@@ -20,7 +20,7 @@ KEYWORDS=""
 
 RDEPEND="
 	>=dev-python/pillow-8.1.1
-	dev-python/tomli
+	dev-python/toml
 	>=dev-python/numpy-1.21.6
 "
 

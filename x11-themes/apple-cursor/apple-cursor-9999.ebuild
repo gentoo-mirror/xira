@@ -21,6 +21,7 @@ SLOT="0"
 BDEPEND="
 	>=dev-lang/python-3.7
 	>=dev-python/clickgen-2.1.2
+	dev-python/attrs
 	sys-apps/yarn
 "
 
@@ -29,7 +30,15 @@ src_compile() {
 }
 
 src_install() {
+	local themes=(
+		macOS-BigSur
+		macOS-BigSur-White
+		macOS-Monterey
+		macOS-Monterey-White
+	)
 	insinto /usr/share/icons
-	doins -r "themes/*"
+	for theme in ${themes[@]}; do
+		doins -r "themes/${theme}"
+	done
 	einstalldocs
 }
