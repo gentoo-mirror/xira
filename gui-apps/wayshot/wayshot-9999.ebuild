@@ -34,6 +34,9 @@ BDEPEND="
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then
 		git-r3_src_unpack
+		# TODO: is this needed at all?
+		# I only put it to suppress a warning
+		# but the tool still compiles.
 		eapply "${FILESDIR}/virtual-workspace-resolver-live.patch" && cargo_live_src_unpack
 	else
 		eapply "${FILESDIR}/virtual-workspace-resolver-live.patch" && cargo_src_unpack
