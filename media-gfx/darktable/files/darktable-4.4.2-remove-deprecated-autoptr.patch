@@ -1,0 +1,39 @@
+diff --git a/src/external/LibRaw/Makefile.devel b/src/external/LibRaw/Makefile.devel
+index f82c007..2766231 100644
+--- a/src/external/LibRaw/Makefile.devel
++++ b/src/external/LibRaw/Makefile.devel
+@@ -8,7 +8,7 @@ CXX=clang++
+ 
+ LDADD+=-lz
+ 
+-CFLAGS=-DLIBRAW_USE_AUTOPTR
++#CFLAGS=-DLIBRAW_USE_AUTOPTR
+ CFLAGS+= -g -I. -pedantic -Wno-long-long -Wno-overflow -O3
+ 
+ # macOS dual arch
+diff --git a/src/external/LibRaw/Makefile.devel.nopp b/src/external/LibRaw/Makefile.devel.nopp
+index 6ece7e9..12b4907 100644
+--- a/src/external/LibRaw/Makefile.devel.nopp
++++ b/src/external/LibRaw/Makefile.devel.nopp
+@@ -8,7 +8,7 @@ CXX=clang++
+ 
+ LDADD+=-lz
+ 
+-CFLAGS=-DLIBRAW_USE_AUTOPTR
++#CFLAGS=-DLIBRAW_USE_AUTOPTR
+ CFLAGS+= -g -I. -pedantic -Wno-long-long -Wno-overflow -O3
+ 
+ # RawSpeed Support
+diff --git a/src/external/LibRaw/Makefile.devel.noppr2i b/src/external/LibRaw/Makefile.devel.noppr2i
+index 6937287..082c7a3 100644
+--- a/src/external/LibRaw/Makefile.devel.noppr2i
++++ b/src/external/LibRaw/Makefile.devel.noppr2i
+@@ -8,7 +8,7 @@ CXX=clang++
+ 
+ LDADD+=-lz
+ 
+-CFLAGS=-DLIBRAW_USE_AUTOPTR
++#CFLAGS=-DLIBRAW_USE_AUTOPTR
+ CFLAGS+= -g -I. -pedantic -Wno-long-long -Wno-overflow -O3
+ 
+ # RawSpeed Support

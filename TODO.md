@@ -1,0 +1,4 @@
+- [] Introduce a prototype of a complete profile with the following:
+    - Better CFLAGS/CXXFLAGS/LDFLAGS/RUSTFLAGS/GOFLAGS than the default
+    - Unmasking and masking of correct packages & versions
+- [] Introduce something like `ltoize` from the GentooLTO overlay, enhanced
