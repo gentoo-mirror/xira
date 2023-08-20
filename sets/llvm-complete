@@ -1,4 +1,10 @@
 dev-util/lldb
+dev-ml/llvm-ocaml
+dev-python/lit
+dev-python/clang-python
+
+dev-libs/libclc
+dev-libs/mlir
 
 sys-devel/lld
 sys-devel/lld-toolchain-symlinks
@@ -15,6 +21,7 @@ sys-devel/clang-toolchain-symlinks
 
 sys-libs/libcxx
 sys-libs/libcxxabi
+sys-libs/libcxxrt
 sys-libs/libomp
 
 sys-libs/compiler-rt
