@@ -20,7 +20,6 @@ sys-devel/clang-toolchain-symlinks
 
 sys-libs/libcxx
 sys-libs/libcxxabi
-sys-libs/libcxxrt
 sys-libs/libomp
 
 sys-libs/compiler-rt
