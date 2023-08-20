@@ -4,7 +4,6 @@ dev-python/lit
 dev-python/clang-python
 
 dev-libs/libclc
-dev-libs/mlir
 
 sys-devel/lld
 sys-devel/lld-toolchain-symlinks
