@@ -1,8 +1,4 @@
-dev-util/lldb
-dev-ml/llvm-ocaml
 dev-python/lit
-dev-python/clang-python
-
 dev-libs/libclc
 
 sys-devel/lld
