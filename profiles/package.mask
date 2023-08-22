@@ -1,0 +1,2 @@
+# Does not build using Clang
+=media-gfx/inkscape-1.3
