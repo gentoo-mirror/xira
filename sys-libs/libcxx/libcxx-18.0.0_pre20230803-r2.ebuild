@@ -13,7 +13,7 @@ HOMEPAGE="https://libcxx.llvm.org/"
 LICENSE="Apache-2.0-with-LLVM-exceptions || ( UoI-NCSA MIT )"
 SLOT="0"
 KEYWORDS=""
-IUSE="+clang +libcxxabi +static-libs +experimental test"
+IUSE="+clang +libcxxabi +static-libs +experimental custom-cflags test"
 REQUIRED_USE="test? ( clang )"
 RESTRICT="!test? ( test )"
 
@@ -96,15 +96,20 @@ multilib_src_configure() {
 			ewarn
 			ewarn "\"experimental\" USE flag is currently enabled."
 			ewarn "This flag is enabled by default, in spirit of the overlay."
-			ewarn "WARNING: Currently this flag expects compiler-rt as the runtime library defined in LDFLAGS (-rtlib=compiler-rt)"
 			ewarn
-			# TODO: these are probably redundant.
-			# These only exist to be sure flags are passed.
+			local -x CFLAGS="-O3 -maes -flto=thin -pipe -march=x86-64-v3"
+			local -x CXXFLAGS="${CFLAGS} -stdlib=libc++"
+			local -x LDFLAGS="-Wl,-O2 -Wl,--as-needed -Wl,-z,pack-relative-relocs -fuse-ld=lld -rtlib=compiler-rt --unwindlib=libunwind"
+		elif use custom-cflags; then
 			local -x CFLAGS="${CFLAGS}"
 			local -x CXXFLAGS="${CXXFLAGS}"
 			local -x LDFLAGS="${LDFLAGS}"
 		else
-			strip-unsupported-flags
+			# Use default flags of the LLVM profile
+			# DO NOT strip unsupported flags.
+			local -x CFLAGS="-O2 -pipe"
+			local -x CXXFLAGS="${CFLAGS}"
+			local -x LDFLAGS="-fuse-ld=lld -rtlib=compiler-rt --unwindlib=libunwind -Wl,--as-needed"
 		fi
 	fi
 
@@ -143,7 +148,8 @@ multilib_src_configure() {
 			-DPython3_EXECUTABLE="${PYTHON}"
 		)
 	fi
-	if use experimental; then
+	# TODO: This might be unnecessary.
+	if use experimental || use custom-cflags ; then
 		mycmakeargs+=(
 			-DLIBCXX_USE_COMPILER_RT=ON
 		)
