@@ -1,0 +1,11 @@
+CFLAGS="-O3 -maes -pipe -flto=thin -march=x86-64-v3"
+CXXFLAGS="${CFLAGS} -stdlib=libc++"
+# This is not ideal, removing "${LDFLAGS}".
+# An alternative would be to copy or remake
+# everything from the main llvm profile.
+# Maybe in the future.
+LDFLAGS="-Wl,-O2 -Wl,-z,pack-relative-relocs -Wl,--as-needed -fuse-ld=lld -rtlib=compiler-rt --unwindlib=libunwind"
+
+RUSTFLAGS="-Copt-level=3 -Cembed-bitcode=yes -Clto=thin -Clinker-plugin-lto=true -Cstrip=symbols -Clink-arg=-Wl,-z,pack-relative-relocs"
+
+GOFLAGS="-ldflags '-s -w'"

@@ -12,6 +12,13 @@ I don't advise you using this overlay, unless you want to or are using one of th
 This project is also in its early stage, with frequent changes, and future plans.  
 Most notably I'd like to implement something like `make.conf.lto` and related concepts from [Gentoo-LTO](https://github.com/InBetweenNames/gentooLTO), which hasn't been updated since Dec. 2022, at time of writing this. (2023-08-02)
 
+### Requirements
+- x86-64-v3 compatible machine
+    - CFLAGS in profiles and some ebuilds explicitly state `-march=x86-64-v3`, as of now.
+- LLVM profile
+    - Best is to install using the LLVM stage3.
+    - Use either the main repository LLVM profile, or the `llvm-desktop` profiles here (preferred).
+
 ## Why?
 Because I can :3  
 In all seriousness, this overlay exists because of:
@@ -49,28 +56,3 @@ I will omit ebuild categories and metadata, as those are self-explanatory.
     The `llvm-complete` set has all packages related to LLVM, some of which aren't in the `gentoo:features/llvm` profile's system set. I have mostly made this for ease of updating and compiling for my binpkg host.  
     The `mail-prequisites` and `openwrt-prequisites` sets are to install mailserver related packages (no POP3, it's 202X), and packages required for OpenWrt image compilation, respectively.  
     There might be more sets in the future, if one is suggested or if I can think of one :3
-
-### Binary cache/host
-If you for whatever reason desire to, you can use my [binpkg host](https://gencache.krxt.dev/). Information about system information below:
-
-- Compilers
-    - CC: `clang`
-    - CXX: `clang++`
-
-- Compiler options
-    - CFLAGS: `-O3 -march=x86-64-v3 -flto=thin -maes -pipe`
-    - CXXFLAGS: `${CFLAGS} -stdlib=libc++`
-    - RUSTFLAGS: `-Ctarget-cpu=x86-64-v3 -Copt-level=3 -Cembed-bitcode=yes -Clto=thin -Clinker-plugin-lto=true -Cstrip=symbols -Clink-arg=-Wl,-z,pack-relative-relocs`
-    - LDFLAGS: `-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -fuse-ld=lld -rtlib=compiler-rt -unwindlib=libunwind`
-
-- Portage variables
-    - VIDEO_CARDS: `amdgpu radeonsi intel radeon`
-    - LLVM_TARGETS: `${LLVM_TARGETS} AMDGPU`
-    - INPUT_DEVICES: `libinput`
-    - L10N: `en pl da el`
-    - BINPKG_FORMAT: `gpkg`
-    - BINPKG_COMPRESS: `zstd`
-        - A working `app-arch/zstd` installation is required
-
-This is used by me to not compile packages such as LibreWolf or LLVM on a `x86-64-v3` compatible laptop.
-Note that packages are not GPG signed despite using `gpkg`, due to a bug in either GPG or Portage about file access to the key file, that I could not solve.
