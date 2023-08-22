@@ -1,3 +1,3 @@
 gentoo:default/linux/amd64/23.0/llvm/systemd
-KRXT_portlay:features/llvm-live
+xira:features/llvm-live
 gentoo:targets/desktop

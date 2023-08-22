@@ -17,7 +17,7 @@ IUSE="+clang +libcxxabi +static-libs +experimental custom-cflags test"
 REQUIRED_USE="test? ( clang )"
 RESTRICT="!test? ( test )"
 
-# Using -r2 here forces usage of KRXT_portlay ebuild
+# Using -r2 here forces usage of libcxxabi from Xira
 RDEPEND="
 	libcxxabi? (
 		~sys-libs/libcxxabi-${PV}-r2[static-libs?,${MULTILIB_USEDEP}]
@@ -98,7 +98,7 @@ multilib_src_configure() {
 			ewarn "This flag is enabled by default, in spirit of the overlay."
 			ewarn
 			local -x CFLAGS="-O3 -maes -flto=thin -pipe -march=x86-64-v3"
-			local -x CXXFLAGS="${CFLAGS} -stdlib=libc++"
+			local -x CXXFLAGS="${CFLAGS}" # -stdlib is not needed here
 			local -x LDFLAGS="-Wl,-O2 -Wl,--as-needed -Wl,-z,pack-relative-relocs -fuse-ld=lld -rtlib=compiler-rt --unwindlib=libunwind"
 		elif use custom-cflags; then
 			local -x CFLAGS="${CFLAGS}"

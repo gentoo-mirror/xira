@@ -17,7 +17,7 @@ IUSE="+clang +libcxxabi +static-libs +experimental custom-cflags test"
 REQUIRED_USE="test? ( clang )"
 RESTRICT="!test? ( test )"
 
-# Using -r2 here forces usage of KRXT_portlay ebuild
+# Using -r2 here forces usage of libcxxabi from Xira
 RDEPEND="
 	libcxxabi? (
 		~sys-libs/libcxxabi-${PV}-r2[static-libs?,${MULTILIB_USEDEP}]

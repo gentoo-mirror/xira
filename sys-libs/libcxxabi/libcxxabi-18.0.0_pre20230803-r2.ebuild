@@ -18,7 +18,7 @@ REQUIRED_USE="test? ( clang )"
 RESTRICT="!test? ( test )"
 
 # in 15.x, cxxabi.h is moving from libcxx to libcxxabi
-# Using -r2 should force usage of libcxx from KRXT_portlay
+# Using -r2 should force usage of libcxx from Xira
 RDEPEND+="
 	!<sys-libs/libcxx-15
 	=sys-libs/libcxx-${PV}-r2

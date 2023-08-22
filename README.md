@@ -1,23 +1,30 @@
-# >> KRXT :: portlay
-~ An LLVM-centric Portage overlay, with focus on live ebuilds ~
+<h1 align="center">Stylism :: <i>Xira</i></h1>
+<p align="center"><i>~ An LLVM-centric Portage overlay ~</i></p>
 
 ## License info
 Every ebuild I wrote here is licensed under ISC.
 Ebuilds I have copied from e.g. the main repository preserve their original GPLv2 header and authors.
 I am not a legal expert. As far as I understand ISC is GPLv2 compatible, but if there are any issues, please message me [here](https://to.stylism.moe/#/@revelation:stylism.moe/), or make an issue on GitHub/Codeberg.
 
-## ⚠️ Experimentalism ahead ⚠️
+## ⚠️ Experimental nature ⚠️
 I don't advise you using this overlay, unless you want to or are using one of the LLVM profiles provided by the Gentoo repository or my modified ones.
 
-This project is also in a very early stage, I will probably change things in here a lot over time, most notably I'd like to implement something like `make.conf.lto` and related concepts from [Gentoo-LTO](https://github.com/InBetweenNames/gentooLTO), which hasn't been updated since Dec. 2022, at time of writing this. (2023-08-02)
+This project is also in its early stage, with frequent changes, and future plans.  
+Most notably I'd like to implement something like `make.conf.lto` and related concepts from [Gentoo-LTO](https://github.com/InBetweenNames/gentooLTO), which hasn't been updated since Dec. 2022, at time of writing this. (2023-08-02)
 
 ## Why?
-Mostly to learn, and because I like using bleeding-edge software :3 ~~then crying when it doesn't work~~
+Because I can :3  
+In all seriousness, this overlay exists because of:
+- Me wanting to put my changes to existing ebuilds somewhere
+- Wanting to compile as much as possible using `clang`
+    - Also with ridiculous compiler flags
+- In general, have a place for LLVM related things (profiles, ebuilds, ...)
+
 
 ## What's in here?
 A directory structure and explanations are listed below.
 ```sh
-KRXT_portlay
+xira
 ├── [ebuild categories]
 ├── metadata
 ├── profiles
