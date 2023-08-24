@@ -46,7 +46,7 @@ DEPEND="
 		x11-libs/libxcb
 		x11-base/xorg-proto
 		x11-base/xcb-proto
-		>=x11-base/xwayland-23.2.0
+		x11-base/xwayland:=[hidpi?]
 	)
 "
 RDEPEND="

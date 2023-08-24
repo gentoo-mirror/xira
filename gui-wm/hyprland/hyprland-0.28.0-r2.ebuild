@@ -19,7 +19,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="systemd X -xwayland-hidpi"
+IUSE="systemd X -hidpi"
 
 DEPEND="
 	dev-libs/libevdev
@@ -44,7 +44,7 @@ DEPEND="
 	)
 	X? (
 		x11-libs/libxcb
-		x11-base/xwayland
+		x11-base/xwayland:=[hidpi?]
 	)
 "
 RDEPEND="
@@ -58,9 +58,9 @@ BDEPEND="
 "
 
 pkg_setup() {
-	if use xwayland-hidpi; then
+	if use hidpi; then
 		ewarn "Xwayland scaling patches are NOT SUPPORTED by upstream"
-		ewarn "Use the \"xwayland-hidpi\" flag at your own discertion."
+		ewarn "Use the \"hidpi\" flag at your own discertion."
 	fi
 }
 
@@ -71,7 +71,7 @@ src_configure() {
 		[[ $(clang-major-version) -ge 16 ]] && export CC_IS_CLANG=1 || die "Hyprland requires Clang >= 16 for C++23 support"
 	fi
 
-	if use xwayland-hidpi; then
+	if use hidpi; then
 		eapply -Np1 "${FILESDIR}/0001-xwayland-support-HiDPI-scale.patch"
 		eapply -Np1 "${FILESDIR}/0002-Fix-configure_notify-event.patch"
 		eapply -Np1 "${FILESDIR}/0003-Fix-size-hints-under-Xwayland-scaling.patch"
