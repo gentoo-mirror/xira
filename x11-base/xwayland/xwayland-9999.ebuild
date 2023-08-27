@@ -16,7 +16,7 @@ fi
 DESCRIPTION="Standalone X server running under Wayland"
 HOMEPAGE="https://wayland.freedesktop.org/xserver.html"
 
-IUSE="selinux video_cards_nvidia unwind xcsecurity hidpi"
+IUSE="selinux video_cards_nvidia unwind xcsecurity hidpi -fractional-hidpi"
 
 LICENSE="MIT"
 SLOT="0"
@@ -63,6 +63,14 @@ PATCHES=(
 	"${FILESDIR}/xwayland-drop-redundantly-installed-files_v2.patch"
 )
 
+pkg_setup() {
+	if use hidpi && use fractional-hidpi; then
+		eerror "Use only one of: \"hidpi\" \"fractional-hidpi\" USE"
+		eerror "Using both results in errors."
+		die
+	fi
+}
+
 src_configure() {
 	local emesonargs=(
 		$(meson_use selinux xselinux)
@@ -98,6 +106,8 @@ src_configure() {
 
 	if use hidpi; then
 		eapply -Np1 "${FILESDIR}/xwayland-hidpi.patch"
+	elif use fractional-hidpi; then
+		eapply -Np1 "${FILESDIR}/xwayland-randr-fractional-scaling.patch"
 	fi
 
 	meson_src_configure

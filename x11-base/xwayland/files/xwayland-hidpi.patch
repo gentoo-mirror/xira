@@ -237,15 +237,6 @@ diff --git a/hw/xwayland/xwayland-output.h b/hw/xwayland/xwayland-output.h
 index bcdf25bec..9cfc33f26 100644
 --- a/hw/xwayland/xwayland-output.h
 +++ b/hw/xwayland/xwayland-output.h
-@@ -53,7 +53,7 @@ struct xwl_output {
-     struct wl_output *output;
-     struct zxdg_output_v1 *xdg_output;
-     uint32_t server_output_id;
--    int32_t x, y, width, height, refresh;
-+    int32_t x, y, width, height, scale, refresh;
-     Rotation rotation;
-     Bool wl_output_done;
-     Bool xdg_output_done;
 @@ -106,6 +106,8 @@ void xwl_output_set_emulated_mode(struct xwl_output *xwl_output,
  void xwl_output_set_window_randr_emu_props(struct xwl_screen *xwl_screen,
                                             WindowPtr window);

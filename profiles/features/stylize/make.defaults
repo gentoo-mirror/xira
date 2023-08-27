@@ -1,4 +1,6 @@
-CFLAGS="-O3 -maes -pipe -flto=thin -march=x86-64-v3 -fsplit-lto-unit"
+# -DQT_NO_VERSION_TAGGING gets rid of
+# ld.lld: error: version script assignment of 'Qt_6.5' to symbol 'qt_version_tag' failed: symbol not defined
+CFLAGS="-O3 -maes -pipe -flto=thin -march=x86-64-v3 -fsplit-lto-unit -DQT_NO_VERSION_TAGGING"
 CXXFLAGS="${CFLAGS} -stdlib=libc++"
 # This is not ideal, removing "${LDFLAGS}".
 # An alternative would be to copy or remake

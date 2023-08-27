@@ -1,0 +1,4 @@
+# 2023/08/27
+# Required by gnome-extra/secrets
+=gui-libs/libadwaita-1.4_beta
+>=gui-libs/gtk-4.12.0
