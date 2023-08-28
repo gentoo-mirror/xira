@@ -31,6 +31,9 @@ I am not a legal expert. As far as I understand ISC is GPLv2 compatible, but if 
 - GURU Overlay
     - Some ebuilds might have dependencies that exist only in the GURU overlay.
 
+### Micro-commits
+These are very small commits I might create at times, mostly for critical things required to be added or removed, without other additions.
+
 ### Why?
 Because I can :3  
 In all seriousness, this overlay exists because of:
