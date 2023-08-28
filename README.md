@@ -1,9 +1,12 @@
-<h1 align="center">Stylism :: <i>Xira</i></h1>
+<h1 align="center"><i>Xira</i></h1>
 <p align="center"><i>~ An LLVM-centric Portage overlay ~</i></p>
 
 ## ⚠️ Experimental nature ⚠️
 I don't advise you use this overlay without the 17.1 clang/23.0 llvm profile selected, preferably the modified ones here, which use 23.0 llvm\[-systemd\] profiles.  
-This project is also in its early stage, with frequent changes, and future plans. 
+This project is also in its early stage, which might cause frequent changes, and future plans.  
+#### Note
+The LLVM profiles from here use the main repo ones as `parent`, but contain extra changes.  
+Most notably setting `-fsplit-lto-unit` in C(XX)FLAGS, which requires e.g. LLVM and Qt packages being rebuilt, if they don't use it.
 
 ## Enabling
 To enable this overlay, use [eselect-repository](https://wiki.gentoo.org/wiki/Eselect/Repository).
