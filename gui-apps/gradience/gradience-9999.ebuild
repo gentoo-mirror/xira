@@ -13,15 +13,22 @@ REPO_URI="https://github.com/GradienceTeam/Gradience"
 
 MY_PV="${PV/\_/\-}"
 
+
+# gtk3 apply patch taken from here
+# https://github.com/GradienceTeam/Gradience/pull/813
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="${REPO_URI}"
+	PATCHES=(
+		"${FILESDIR}/fix-gtk3-apply-crashing.patch"
+	)
 else
 	SRC_URI="${REPO_URI}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 	S="${WORKDIR}/Gradience-${MY_PV}"
 	if [[ ${PV} == "0.8.0_beta1" ]]; then
 		PATCHES=(
 			"${FILESDIR}/exclude-submodules-meson.patch"
+			"${FILESDIR}/fix-gtk3-apply-crashing.patch"
 		)
 	fi
 fi
