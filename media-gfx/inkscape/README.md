@@ -5,6 +5,3 @@ I am also not a C++ dev, at least currently, and made the changes with help of r
 
 # Why?
 Inkscape does not seem to build using LLVM/Clang, due to C++17 removal of `std::binary_function` and `std::unary_function`, so I have made a patch converting lines using those two to use `std::function`, which Clang can compile. The patch is added to the ebuild, using EAPI 6's `PATCHES` array.
-
-# Why not use `/etc/portage/patches` instead?
-Mostly for ease of use, when managing multiple machines.
