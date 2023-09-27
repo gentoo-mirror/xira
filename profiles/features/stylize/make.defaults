@@ -12,5 +12,3 @@ CXXFLAGS="${CFLAGS} -stdlib=libc++"
 LDFLAGS="-Wl,-O2 -Wl,-z,pack-relative-relocs -Wl,--as-needed -fuse-ld=lld -rtlib=compiler-rt --unwindlib=libunwind"
 
 RUSTFLAGS="-Copt-level=3 -Cembed-bitcode=yes -Clto=thin -Clinker-plugin-lto=true -Cstrip=symbols -Clink-arg=-Wl,-z,pack-relative-relocs"
-
-GOFLAGS='-ldflags="-s -w"'
