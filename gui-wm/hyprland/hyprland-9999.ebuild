@@ -19,7 +19,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="systemd X hidpi"
+IUSE="systemd X hidpi -fractional-hidpi"
 
 DEPEND="
 	dev-libs/libevdev
