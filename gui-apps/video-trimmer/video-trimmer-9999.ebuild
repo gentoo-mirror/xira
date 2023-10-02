@@ -15,6 +15,7 @@ REPO_URI="https://gitlab.gnome.org/YaLTeR/video-trimmer"
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="${REPO_URI}"
+	PATCHES=("${FILESDIR}/cargo-frozen-flag.patch")
 else
 	SRC_URI="${REPO_URI}/-/archive/${P}.tar.gz"
 	S="${WORKDIR}/${P}"
@@ -30,7 +31,10 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
-BDEPEND=""
+BDEPEND="
+	virtual/rust
+	dev-util/blueprint-compiler
+"
 
 RESTRICT="test"
 
@@ -53,11 +57,16 @@ src_configure() {
 	cargo_src_configure
 }
 
+# Both meson and cargo compile commands are needed
+# As we heavily modify the repo, but meson is still needed for configuration
+# outside of src_configure (wish it wasn't here though)
 src_compile() {
+	meson_src_compile
 	cargo_src_compile
 }
 
 src_install() {
+	meson_src_install
 	cargo_src_install
 }
 
