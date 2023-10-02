@@ -25,6 +25,12 @@ Every ebuild I wrote here is licensed under ISC.
 Ebuilds I have copied from e.g. the main repository preserve their original GPLv2 header and authors.
 I am not a legal expert. As far as I understand ISC is GPLv2 compatible, but if there are any issues, please message me [here](https://to.stylism.moe/#/@revelation:stylism.moe/), or make an issue on GitHub/Codeberg.
 
+### Packages in here
+Mostly packages I haven't seen anywhere else, like other overlays tend to do. As said, this overlay mostly focuses on existing ebuilds that don't build using clang with default or weird compiler options that I use, so:
+- Clang build fixes
+- Gnome apps I haven't seen anywhere else
+- Live versions of existing ebuilds (main or overlays)
+
 ### Requirements
 - x86-64-v3 compatible machine
     - CFLAGS in profiles and some ebuilds explicitly state `-march=x86-64-v3`, as of now.
