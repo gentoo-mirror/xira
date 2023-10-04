@@ -79,3 +79,9 @@ src_compile() {
 src_install() {
 	meson_src_install -C build --destdir "${D}"
 }
+
+pkg_postinst() {
+	elog "To learn on how to use ags, please read"
+	elog "https://github.com/Aylur/ags/wiki/configuration"
+	elog "which describes its usage and configuration."
+}
