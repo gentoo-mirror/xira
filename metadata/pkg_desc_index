@@ -1,0 +1,37 @@
+acct-group/dendrite 0: System group: dendrite
+acct-user/dendrite 0: Account for the dendrite homeserver
+app-crypt/mkp224o 1.6.1 9999: Vanity address generator for v3 onion hidden services
+app-misc/colorgen-nvim 9999: Blazingly fast colorscheme generator for Neovim, written in Rust
+app-shells/elvish 0.19.2 9999: An expressive programming language and interactive shell
+app-text/sioyek 2.0.0: Sioyek is a PDF viewer with a focus on textbooks and research papers
+dev-python/clickgen 2.1.3: The hassle-free cursor building toolbox
+dev-python/pykeepass 4.0.6: 
+dev-python/toml 0.10.2: Python Library for Tom's Obvious, Minimal Language
+dev-tex/texlab 9999: An implementation of LSP for LaTeX
+games-util/steam-tui 9999: Rust TUI client for steamcmd
+gnome-base/gsettings-desktop-schemas 45.0: Collection of GSettings schemas for GNOME desktop
+gnome-extra/aylurs-gtk-shell 9999: A customizable and extensible shell
+gnome-extra/neovim-gnome-terminal-wrapper 9999: Wrapper for running neovim in a separate instance of gnome-terminal
+gnome-extra/secrets 9999: A password manager made for the GNOME desktop
+gui-apps/gradience 0.4.1 0.8.0_beta1 9999: Change the look of Adwaita, with ease
+gui-apps/hyprpicker 9999: A wlroots-compatible Wayland color picker that does not suck.
+gui-apps/video-trimmer 9999: Trim videos quickly
+gui-apps/wayshot 9999: A fast screenshot tool for wlroots based compositors
+gui-apps/wl-clip-persist 9999: Keep Wayland clipboard after programs close
+gui-apps/wluma 4.3.0: wluma
+gui-libs/wlroots 9999: Pluggable, composable, unopinionated modules for building a Wayland compositor
+gui-wm/hyprland 0.28.0-r2 9999: Dynamic tiling Wayland compositor that doesn't sacrifice on its looks.
+media-fonts/inter 4.0_beta20230713: The Inter font family
+media-fonts/noto-emoji 999999999: An open source emoji font from Google
+media-gfx/darktable 4.4.2-r2: A virtual lighttable and darkroom for photographers
+media-gfx/inkscape 1.2.2-r99: SVG based generic vector-drawing program
+media-video/celluloid 0.25 9999: A simple GTK+ frontend for mpv
+net-matrix/dendrite 9999: A second-generation Matrix homeserver written in Go
+net-misc/aria2 1.36.0: A lightweight multi-protocol download utility
+sys-boot/limine 5.20230801.0 5.20230819.0: A modern, advanced, portable, multiprotocol bootloader
+sys-libs/libcxx 18.0.0_pre20230925-r2: New implementation of the C++ standard library, targeting C++11
+sys-libs/libcxxabi 18.0.0_pre20230925-r2: Low level support for a standard C++ library
+x11-base/xwayland 23.2.0 9999: Standalone X server running under Wayland
+x11-themes/adw-gtk3 9999: The theme from libadwaita ported to GTK-3
+x11-themes/apple-cursor 9999: Open source macOS cursors
+x11-themes/arc-theme 9999: A flat theme with transparent elements

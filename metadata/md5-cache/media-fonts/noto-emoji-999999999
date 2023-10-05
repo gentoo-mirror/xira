@@ -1,0 +1,13 @@
+BDEPEND=X? ( >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings )
+DEFINED_PHASES=install postinst postrm setup unpack
+DESCRIPTION=An open source emoji font from Google
+EAPI=8
+HOMEPAGE=https://fonts.google.com/noto/specimen/Noto+Emoji
+INHERIT=font
+IUSE=X
+KEYWORDS=~*
+LICENSE=OTF-1.1
+PROPERTIES=live
+SLOT=0
+_eclasses_=font	aa113a3df9cd0a9693a1c1ee7c34a6eb
+_md5_=5b220b932006cf49c8365f4b0f57ad80
