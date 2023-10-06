@@ -18,7 +18,7 @@ gui-apps/hyprpicker 9999: A wlroots-compatible Wayland color picker that does no
 gui-apps/video-trimmer 9999: Trim videos quickly
 gui-apps/wayshot 9999: A fast screenshot tool for wlroots based compositors
 gui-apps/wl-clip-persist 9999: Keep Wayland clipboard after programs close
-gui-apps/wluma 4.3.0: wluma
+gui-apps/wluma 4.3.0 9999: wluma
 gui-libs/wlroots 9999: Pluggable, composable, unopinionated modules for building a Wayland compositor
 gui-wm/hyprland 0.28.0-r2 9999: Dynamic tiling Wayland compositor that doesn't sacrifice on its looks.
 media-fonts/inter 4.0_beta20230713: The Inter font family
