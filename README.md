@@ -10,10 +10,12 @@ Most notably setting `-fsplit-lto-unit` in C(XX)FLAGS, which requires e.g. LLVM 
 
 ## Enabling
 To enable this overlay, use [eselect-repository](https://wiki.gentoo.org/wiki/Eselect/Repository).
+
+This overlay is now in the official list, so you can simply call this command:
 ```
-eselect repository add xira git https://github.com/kir68k/xira
+eselect repository enable xira
 ```
-*You can use `codeberg.org/kir68k/xira` as well*  
+*You can use `codeberg.org/kir68k/xira`, as well as my gitea instance*  
 Afterwards, run `emaint` for synchronizing
 ```
 emaint sync -r xira
