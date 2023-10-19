@@ -28,8 +28,17 @@ To enable, you also need to enable the `mv` overlay:
 eselect repository enable mv
 ```
 Afterwards, please remove `CFLAGS, CXXFLAGS, RUSTFLAGS, LDFLAGS` from your `make.conf`.
+Or, if you want platform-specific CFLAGS, set these to:
+```bash
+CFLAGS="${CFLAGS} -march=native"
+CXXFLAGS="${CFLAGS} [-your_changes]"
+RUSTFLAGS="${RUSTFLAGS} [-your_changes]"
+```
+
 If this does not work, please contact me.
+
 <i>~ All credit goes to the creator of gentooLTO, linked [here](https://github.com/InBetweenNames/gentooLTO) ~</i>
+
 This project is kept as GPLv2, instead of ISC, as I am not sure whether I can change the license.
 
 ## Information

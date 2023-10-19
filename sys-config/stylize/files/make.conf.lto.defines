@@ -87,3 +87,16 @@ UNWINDLIB="--unwindlib=libunwind"
 
 UNDEFVER="-Wl,--undefined-version"
 # Don't force versioning of scripts, to prevent build failures. Potentially bad?
+
+###########################
+# RUSTFLAGS SECTION
+###########################
+RS_LLVM_BITCODE="-Cembed-bitcode=yes"
+
+RS_LTO="-Clto=thin"
+
+RS_LINKER_PLUGIN="-Clinker-plugin-lto=true"
+
+RS_STRIP="-Cstrip=symbols"
+
+RS_RELOCS="-Clink-arg=-Wl,-z,pack-relative-relocs"
