@@ -1,0 +1,89 @@
+#This file contains the definitions for the optimization settings used by GentooLTO.
+#source this file directly in your make.conf if you want to cherry-pick settings
+#and don't want to use the make.conf.lto default configuration, defining the number of threads
+#to use during the LTO process beforehand:
+
+#NTHREADS="12"
+
+#source make.conf.lto.defines
+
+#Guidelines:
+#* Your CFLAGS should contain ${FLTO}
+#* Anything else is up to you, such as -march, -pipe, -O{3,2,s,1}, etc...
+#* CXXFLAGS should be set to CFLAGS
+#* Optionally, set other *FLAGS for languages compiled with Clang as well
+#* LDFLAGS is changed, following the LLVM profile's.
+#  See make.conf.lto for more details.
+
+###########################
+# CFLAGS SECTION
+###########################
+
+FLTO="-flto=thin"
+
+# FLTO is of the form -flto[=n] where n is the number of threads to use during linking.
+# Here it is set to use ThinLTO, since we're using Clang. -flto=full would use full LTO.
+
+SEMINTERPOS="-fno-semantic-interposition"
+
+#With -fno-semantic-interposition the compiler assumes that if interposition happens for functions
+#the overwriting function will have precisely the same semantics (and side effects).
+#Similarly if interposition happens for variables, the constructor of the variable will be the same.
+#The flag has no effect for functions explicitly declared inline (where it is never allowed for interposition to change semantics) and for symbols explicitly declared weak.
+
+NOCOMMON="-fno-common"
+
+# This option only affects C code.  Only non-conformant C code needs -fcommon, which is enabled by default.  Clear Linux leaves this flag off by default.
+# This is enabled by default with GCC 10 and is kept here only for documentation purposes.  Use `-fcommon` to restore
+# GCC 9.x behaviour and below.
+
+SAFEST_FAST_MATH="-fno-math-errno -fno-trapping-math"
+SAFER_UNSAFE_MATH_OPTS="-fno-signed-zeros -fno-trapping-math -fassociative-math -freciprocal-math"
+SAFER_FAST_MATH="${SAFER_UNSAFE_MATH_OPTS} -fno-math-errno -ffinite-math-only -fno-rounding-math -fexcess-precision=fast"
+
+#These are flags left off by default that we're planning to start using.  Clear Linux uses these in lieu of full -ffast-math optimizations
+#They DO break compliance with ISO C++, so we'll be careful about introducing these.
+#Relevant discussion: https://gcc.gnu.org/ml/gcc/2017-09/msg00079.html
+#We may end up just going full -Ofast, with exceptions done in the usual way.
+
+
+NOPLT="-fno-plt"
+
+#This option omits the PLT from the executable, making calls go through the GOT directly.
+#It inhibits lazy binding, so this is not enabled by default.  If you use prelink, this is
+#strictly better than lazy binding.
+
+AES="-maes"
+
+# x86 specific option.
+
+SPLITLTO="-fsplit-lto-unit"
+
+# Enabled by default with Control Flow Integrity, this option enable LTOUnit splitting, during ThinLTO.
+
+QTNOVERSION="-DQT_NO_VERSION_TAGGING"
+
+# This option disabled QT version tagging, resolving a lot of errors where ld.lld cannot find symbols for QT versions. This does not impact end-user experience, at least as far as I know.
+
+###########################
+# LDFLAGS SECTION
+###########################
+
+RELOCS="-Wl,-z,pack-relative-relocs"
+# Read here: https://reviews.llvm.org/D120701
+
+NEEDED="-Wl,--as-needed"
+# Only set DT_NEEDED for shared libraries if used. 
+
+LLD="-fuse-ld=lld"
+# Use the ld.lld linker
+
+RTLIB="compiler-rt"
+# Use compiler-rt as the compiler runtime library
+
+UNWINDLIB="--unwindlib=libunwind"
+# Use llvm's libunwind as the unwind library, CONFLICTS WITH GNUs LIBUNWIND.
+# Double hyphen as to avoid gcc being able to interpret this.
+
+UNDEFVER="-Wl,--undefined-version"
+# Don't force versioning of scripts, to prevent build failures. Potentially bad?
