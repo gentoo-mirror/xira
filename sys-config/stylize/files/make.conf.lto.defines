@@ -12,7 +12,6 @@
 #* Anything else is up to you, such as -march, -pipe, -O{3,2,s,1}, etc...
 #* CXXFLAGS should be set to CFLAGS
 #* Optionally, set other *FLAGS for languages compiled with Clang as well
-#* LDFLAGS is changed, following the LLVM profile's.
 #  See make.conf.lto for more details.
 
 ###########################
@@ -64,29 +63,6 @@ SPLITLTO="-fsplit-lto-unit"
 QTNOVERSION="-DQT_NO_VERSION_TAGGING"
 
 # This option disabled QT version tagging, resolving a lot of errors where ld.lld cannot find symbols for QT versions. This does not impact end-user experience, at least as far as I know.
-
-###########################
-# LDFLAGS SECTION
-###########################
-
-RELOCS="-Wl,-z,pack-relative-relocs"
-# Read here: https://reviews.llvm.org/D120701
-
-NEEDED="-Wl,--as-needed"
-# Only set DT_NEEDED for shared libraries if used. 
-
-LLD="-fuse-ld=lld"
-# Use the ld.lld linker
-
-RTLIB="compiler-rt"
-# Use compiler-rt as the compiler runtime library
-
-UNWINDLIB="--unwindlib=libunwind"
-# Use llvm's libunwind as the unwind library, CONFLICTS WITH GNUs LIBUNWIND.
-# Double hyphen as to avoid gcc being able to interpret this.
-
-UNDEFVER="-Wl,--undefined-version"
-# Don't force versioning of scripts, to prevent build failures. Potentially bad?
 
 ###########################
 # RUSTFLAGS SECTION
