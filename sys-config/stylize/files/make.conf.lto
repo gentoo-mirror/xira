@@ -74,5 +74,4 @@ source /etc/portage/make.conf.lto.defines
 
 CFLAGS="-O3 ${SEMINTERPOS} ${FLTO} ${AES} ${SPLITLTO} ${QTNOVERSION} -fuse-linker-plugin"
 CXXFLAGS="${CFLAGS} -stdlib=libc++"
-LDFLAGS="-Wl,-O2 ${RELOCS} ${NEEDED} ${LLD} ${RTLIB} ${UNWINDLIB} ${UNDEFVER}"
 RUSTFLAGS="-Copt-level=3 ${RS_LLVM_BITCODE} ${RS_LTO} ${RS_LINKER_PLUGIN} ${RS_STRIP} ${RS_RELOCS}"

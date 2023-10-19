@@ -3,22 +3,27 @@ LTOOverrideFlagOMatic()
 	if [[ "${LTO_ENABLE_FLAGOMATIC}" != "yes" ]]; then
 		strip-flags()
 		{
-			ewarn "lto-overlay: strip-flags OVERRIDDEN"
+			ewarn "stylize: strip-flags OVERRIDDEN"
 		}
+
+        strip-unsupported-flags()
+        {
+            ewarn "stylize: strip-unsupported-flags OVERRIDEN"
+        }
 
 		replace-flags()
 		{
-			ewarn "lto-overlay: replace-flags OVERRIDDEN"
+			ewarn "stylize: replace-flags OVERRIDDEN"
 		}
 
 		append-flags()
 		{
-			ewarn "lto-overlay: append-flags OVERRIDDEN"
+			ewarn "stylize: append-flags OVERRIDDEN"
 		}
 
 		filter-flags()
 		{
-			ewarn "lto-overlay: filter-flags OVERRIDDEN"
+			ewarn "stylize: filter-flags OVERRIDDEN"
 		}
 	fi
 }

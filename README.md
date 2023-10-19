@@ -34,6 +34,24 @@ CFLAGS="${CFLAGS} -march=native"
 CXXFLAGS="${CFLAGS} [-your_changes]"
 RUSTFLAGS="${RUSTFLAGS} [-your_changes]"
 ```
+Currently, these are:
+```bash
+¥ portageq envvar CFLAGS RUSTFLAGS
+-O3 -fno-semantic-interposition -flto=thin -maes -fsplit-lto-unit -DQT_NO_VERSION_TAGGING -fuse-linker-plugin
+-Copt-level=3 -Cembed-bitcode=yes -Clto=thin -Clinker-plugin-lto=true -Cstrip=symbols -Clink-arg=-Wl,-z,pack-relative-relocs
+```
+CXXFLAGS is a superset of CFLAGS, with the addition of `-stdlib=libc++`, to use LLVM's C++ stdlib.
+
+***PLEASE*** keep`LDFLAGS` same as your profile's. Using the LLVM profiles from here is recommended for use with this.
+If you want to make changes to `LDFLAGS`, set as follows:
+```bash
+LDFLAGS="${LDFLAGS} [-your_changes]"
+```
+`LDFLAGS` Currently:
+```bash
+¥ portageq envvar LDFLAGS
+-Wl,-O2 -Wl,-z,pack-relative-relocs -Wl,--as-needed -fuse-ld=lld -rtlib=compiler-rt --unwindlib=libunwind -Wl,--undefined-version
+```
 
 If this does not work, please contact me.
 
