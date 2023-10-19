@@ -21,6 +21,17 @@ Afterwards, run `emaint` for synchronizing
 emaint sync -r xira
 ```
 
+## Information on stylize
+This repository now also includes `sys-config/stylize`, a split off ltoize from the gentooLTO repository. For now it's slightly modified to meet Clang usage, but I plan on expanding it further, eventually replacing copied main repo ebuilds with patches in package.cflags from this package.
+To enable, you also need to enable the `mv` overlay:
+```
+eselect repository enable mv
+```
+Afterwards, please remove `CFLAGS, CXXFLAGS, RUSTFLAGS, LDFLAGS` from your `make.conf`.
+If this does not work, please contact me.
+<i>~ All credit goes to the creator of gentooLTO, linked [here](https://github.com/InBetweenNames/gentooLTO) ~</i>
+This project is kept as GPLv2, instead of ISC, as I am not sure whether I can change the license.
+
 ## Information
 ### License info
 Every ebuild I wrote here is licensed under ISC.
