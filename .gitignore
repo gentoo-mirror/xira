@@ -1,3 +1,4 @@
 tmp/
 sys-apps/memtest86+/
 gnome-base/gnome-shell/
+dev-lang/ghc/

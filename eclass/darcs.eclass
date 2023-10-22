@@ -30,11 +30,6 @@ BDEPEND="dev-vcs/darcs"
 # The project name.
 [[ -z "${EDARCS_PROJECT}" ]] && EDARCS_PROJECT="${PN}"
 
-# @ECLASS_VARIABLE: EDARCS_LAZY
-# @DESCRIPTION:
-# Whether to lazy clone or not, with --lazy
-# Must be a boolean.
-
 # @FUNCTION: darcs-fetch
 # @USAGE: darcs_fetch
 # @DESCRIPTION
@@ -60,18 +55,10 @@ darcs_fetch() {
 	if [[ ! -d "${repo}" ]]; then
 		# Check whether we're cloning lazily or not
 		einfo "Cloning project ${EDARCS_REPO_URI} to ${repo}"
-		if [[ ${EDARCS_LAZY} == true ]]; then
-			darcs clone \
-				--lazy	\
-				"${EDARCS_REPO_URI}" || \
-				rm -rf "${repo}"
-				die "darcs lazy clone failed"
-		else
-			darcs clone \
-				"${EDARCS_REPO_URI}" || \
-				rm -rf "${repo}"
-				die "darcs clone failed"
-		fi
+		darcs clone \
+			"${EDARCS_REPO_URI}" || \
+			rm -rf "${repo}"
+			die "darcs clone failed"
 	fi
 	popd > /dev/null || die
 }
