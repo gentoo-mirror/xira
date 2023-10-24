@@ -9,7 +9,6 @@ dev-python/clickgen 2.1.3: The hassle-free cursor building toolbox
 dev-python/pykeepass 4.0.6: 
 dev-python/toml 0.10.2: Python Library for Tom's Obvious, Minimal Language
 dev-tex/texlab 9999: An implementation of LSP for LaTeX
-games-util/steam-tui 9999: Rust TUI client for steamcmd
 gnome-base/gsettings-desktop-schemas 45.0: Collection of GSettings schemas for GNOME desktop
 gnome-extra/aylurs-gtk-shell 9999: A customizable and extensible shell
 gnome-extra/neovim-gnome-terminal-wrapper 9999: Wrapper for running neovim in a separate instance of gnome-terminal
