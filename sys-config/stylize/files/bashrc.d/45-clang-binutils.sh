@@ -14,9 +14,9 @@ CLANG_BINUTILS() {
         export READELF="llvm-readelf"
         export ADDR2LINE="llvm-addr2line"
 
-        # GHC workaround
+        # GHC/GCC workaround
         unset CTARGET
-        export EXTRA_ECONF="CC=clang"
+        export EXTRA_ECONF="CC=clang CXX=clang++"
     fi
 }
 

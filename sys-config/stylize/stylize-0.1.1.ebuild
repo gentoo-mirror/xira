@@ -50,7 +50,12 @@ pkg_preinst() {
 	else
 		ACTIVE_CC=$(gcc-fullversion)
 	fi
-	GENTOOLTO_PORTDIR=$(portageq get_repo_path ${PORTAGE_CONFIGROOT} xira)
+
+	# NOT WORKING ON PORTAGE >=3.0.54
+	#GENTOOLTO_PORTDIR=$(portageq get_repo_path ${PORTAGE_CONFIGROOT} xira)
+	# For now this has to do.
+	# TODO: please find an alternative.
+	GENTOOLTO_PORTDIR="/var/db/repos/xira"
 	LTO_PORTAGE_DIR="${GENTOOLTO_PORTDIR}/${CATEGORY}/${PN}/files"
 
 	COMMON_WORKAROUNDS=(
