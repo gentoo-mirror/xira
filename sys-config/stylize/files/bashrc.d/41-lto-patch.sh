@@ -18,7 +18,10 @@ LTOPatch() {
 	[[ -f ${tagfile} ]] && return
 	>> "${tagfile}"
 
-	local lto_overlay_dir="$(portageq get_repo_path ${PORTAGE_CONFIGROOT} lto-overlay)"		
+    # NOT WORKING ON PORTAGE >=3.0.54
+    # local lto_overlay_dir="$(portageq get_repo_path ${PORTAGE_CONFIGROOT} xira)"
+    # TODO: Find an alternative to this
+    local lto_overlay_dir="/var/db/repos/xira"
 	local basedir="${lto_overlay_dir%/}/sys-config/stylize/files/patches"
 
 	local applied d f
