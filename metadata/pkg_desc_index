@@ -28,6 +28,7 @@ media-fonts/inter 4.0_beta20230713: The Inter font family
 media-fonts/noto-emoji 999999999: An open source emoji font from Google
 media-gfx/darktable 4.4.2-r2: A virtual lighttable and darkroom for photographers
 media-gfx/inkscape 1.2.2-r99: SVG based generic vector-drawing program
+media-gfx/processing-bin 4.3: Visual context programming language
 media-video/celluloid 0.25 9999: A simple GTK+ frontend for mpv
 net-matrix/dendrite 9999: A second-generation Matrix homeserver written in Go
 net-misc/aria2 1.36.0: A lightweight multi-protocol download utility
