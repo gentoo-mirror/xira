@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Processing
+Comment=Programming environment for creating images, animations and interactions
+Exec=processing %f
+Icon=processing
+Terminal=false
+StartupNotify=false
+Categories=Application;Development;
+MimeType=text/x-processing;
