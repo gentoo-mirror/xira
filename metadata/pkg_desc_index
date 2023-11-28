@@ -30,6 +30,7 @@ media-gfx/darktable 4.4.2-r2: A virtual lighttable and darkroom for photographer
 media-gfx/inkscape 1.2.2-r99: SVG based generic vector-drawing program
 media-gfx/processing-bin 4.3: Visual context programming language
 media-video/celluloid 0.25 9999: A simple GTK+ frontend for mpv
+net-im/discord 0.0.36: All-in-one voice and text chat for gamers
 net-matrix/dendrite 9999: A second-generation Matrix homeserver written in Go
 net-misc/aria2 1.36.0: A lightweight multi-protocol download utility
 sys-boot/limine 5.20230801.0 5.20230819.0: A modern, advanced, portable, multiprotocol bootloader
