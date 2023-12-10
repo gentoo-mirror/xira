@@ -1,0 +1,4 @@
+app-arch/cabextract
+app-arch/wimlib
+app-crypt/chntpw
+app-cdr/cdrtools
