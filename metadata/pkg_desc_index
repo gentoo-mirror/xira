@@ -24,7 +24,7 @@ gui-apps/wl-clip-persist 9999: Keep Wayland clipboard after programs close
 gui-apps/wluma 4.3.0 9999: wluma
 gui-libs/wlroots 9999: Pluggable, composable, unopinionated modules for building a Wayland compositor
 gui-wm/hikari 9999: Wayland compositor inspired by CWM
-media-fonts/inter 4.0_beta20230713: The Inter font family
+media-fonts/inter 4.0-r2: The Inter font family
 media-fonts/noto-emoji 999999999: An open source emoji font from Google
 media-gfx/darktable 4.4.2-r2: A virtual lighttable and darkroom for photographers
 media-gfx/inkscape 1.2.2-r99: SVG based generic vector-drawing program
