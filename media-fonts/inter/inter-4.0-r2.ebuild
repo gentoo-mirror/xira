@@ -10,10 +10,10 @@ HOMEPAGE="https://rsms.me/inter/"
 
 # Replace underscore with hyphen
 # Then replace beta20230713 to beta9h
-PV="${PV/\_/\-}"
-MY_PV="${PV/20230713/9h}"
+#PV="${PV/\_/\-}"
+#MY_PV="${PV/20230713/9h}"
 
-SRC_URI="https://github.com/rsms/inter/releases/download/v${MY_PV}/Inter-${MY_PV}.zip -> ${P}.zip"
+SRC_URI="https://github.com/rsms/inter/releases/download/v${PV}/Inter-${PV}.zip -> ${P}.zip"
 KEYWORDS="~amd64"
 S="${WORKDIR}"
 
@@ -26,7 +26,7 @@ BDEPEND="
 
 src_install() {
 	insinto /usr/share/fonts/Inter
-	local font="Inter-Variable"
+	local font="InterVariable"
 	doins ${font}.ttf
 	doins ${font}-Italic.ttf
 	einstalldocs
