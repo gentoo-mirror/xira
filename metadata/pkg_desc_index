@@ -11,6 +11,7 @@ dev-python/toml 0.10.2: Python Library for Tom's Obvious, Minimal Language
 dev-python/vpk 1.4.0: Open, Search, Extract and Create VPKs in python
 dev-tex/texlab 9999: An implementation of LSP for LaTeX
 dev-util/exercism 3.2.0 9999: A Go based command line tool for exercism.org
+games-util/vpk-fuse 9999 20230415: FUSE filesystem to read Valve VPK files
 gnome-base/gsettings-desktop-schemas 45.0: Collection of GSettings schemas for GNOME desktop
 gnome-extra/aylurs-gtk-shell 9999: A customizable and extensible shell
 gnome-extra/neovim-gnome-terminal-wrapper 9999: Wrapper for running neovim in a separate instance of gnome-terminal
