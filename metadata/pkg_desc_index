@@ -38,6 +38,7 @@ sys-boot/limine 5.20230801.0 5.20230819.0: A modern, advanced, portable, multipr
 sys-config/stylize 0.1.1: A configuration for portage to make building with LTO easy
 sys-libs/libcxx 18.0.0_pre20231129: New implementation of the C++ standard library, targeting C++11
 sys-libs/libcxxabi 18.0.0_pre20231129: Low level support for a standard C++ library
+www-apps/airlift-bin 0.4.1: A self-hosted file upload and sharing service
 www-client/epiphany 45.0 9999: GNOME webbrowser based on Webkit
 x11-base/xwayland 23.2.0 9999: Standalone X server running under Wayland
 x11-themes/adw-gtk3 9999: The theme from libadwaita ported to GTK-3
