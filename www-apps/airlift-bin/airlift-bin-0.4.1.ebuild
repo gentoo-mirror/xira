@@ -9,7 +9,7 @@ HOMEPAGE="https://github.com/moshee/airlift"
 SRC_URI="https://github.com/moshee/airlift/releases/download/v0.4.1/airliftd-v${PV}-linux_amd64.tar.gz -> ${P}.tar.gz"
 S=${WORKDIR}
 
-LICENSE="BSD-3"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64"
 RESTRICT="mirror test"
