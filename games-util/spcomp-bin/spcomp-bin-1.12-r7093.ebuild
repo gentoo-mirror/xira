@@ -12,7 +12,7 @@ SRC_URI="https://sm.alliedmods.net/smdrop/${PV}/sourcemod-${PV}.${SUBVER}-git${G
 
 LICENSE="GPL-2+ GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror"
 
 S=${WORKDIR}
