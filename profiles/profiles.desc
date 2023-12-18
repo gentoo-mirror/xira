@@ -1,4 +1,6 @@
 amd64 llvm-desktop exp
+amd64 llvm-desktop-gnome exp
 amd64 llvm-systemd-desktop exp
+amd64 llvm-systemd-desktop-gnome exp
 amd64 llvm-live-desktop exp
 amd64 llvm-live-systemd-desktop exp
