@@ -1,0 +1,17 @@
+BDEPEND=app-arch/unzip dev-util/patchelf virtual/pkgconfig
+DEFINED_PHASES=install nofetch postinst postrm preinst pretend setup
+DEPEND=app-arch/libarchive dev-libs/glib dev-libs/log4cxx dev-libs/openssl:= dev-qt/qtcore:5 dev-qt/qtsvg:5 dev-qt/qtwebengine:5 dev-qt/qtwebsockets:5 media-libs/gstreamer media-libs/libpano13 media-libs/libpng || ( media-libs/tiff:0/6 media-libs/tiff-compat:4 ) sys-fs/fuse sys-libs/libcxx sys-libs/libxcrypt udev? ( virtual/udev ) virtual/glu virtual/opencl x11-libs/gtk+:= x11-misc/xdg-user-dirs !!media-video/davinci-resolve-studio
+DESCRIPTION=Professional A/V post-production software suite
+EAPI=8
+HOMEPAGE=https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=check-reqs desktop udev xdg
+IUSE=doc udev
+KEYWORDS=-* ~amd64
+LICENSE=all-rights-reserved
+RDEPEND=app-arch/libarchive dev-libs/glib dev-libs/log4cxx dev-libs/openssl:= dev-qt/qtcore:5 dev-qt/qtsvg:5 dev-qt/qtwebengine:5 dev-qt/qtwebsockets:5 media-libs/gstreamer media-libs/libpano13 media-libs/libpng || ( media-libs/tiff:0/6 media-libs/tiff-compat:4 ) sys-fs/fuse sys-libs/libcxx sys-libs/libxcrypt udev? ( virtual/udev ) virtual/glu virtual/opencl x11-libs/gtk+:= x11-misc/xdg-user-dirs !!media-video/davinci-resolve-studio
+RESTRICT=strip mirror bindist fetch
+SLOT=0
+SRC_URI=DaVinci_Resolve_18.6.4_Linux.zip
+_eclasses_=check-reqs	02ac7654b64f7acc7a8b1a35ad9d6ddc	desktop	021728fdc1b03b36357dbc89489e0f0d	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	udev	eec0bbab06977f1cfc5597269c1fa152	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_md5_=28763950132a392b3a6efb707ee7ef15
