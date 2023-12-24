@@ -220,3 +220,12 @@ src_install() {
 		dobin "${WORKDIR}/gui_build/gmic_qt"
 	fi
 }
+
+pkg_postinst() {
+	if use gimp3; then
+		ewarn "Currently, gmic_qt does NOT support Wayland."
+		ewarn "As a result of this, it is required to launch"
+		ewarn "GIMP 2.99 with GDK_BACKEND=x11."
+	fi
+	default
+}

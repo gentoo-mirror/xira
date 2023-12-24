@@ -2,7 +2,8 @@
 <p align="center"><i>~ An LLVM-centric Portage overlay ~</i></p>
 
 ## Package count
-2023-12-22 03:50 CEST: 49
+2023-12-22 03:50 CEST: 54
+
 Counted by:
 ```
 ls -Fd */* | grep '/$' | grep -Ev '^(profiles|metadata)' | wc -l
