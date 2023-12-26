@@ -5,6 +5,8 @@ dev-lang/ghc/
 sys-devel/gcc/
 games-util/ambuild/
 
+dev-python/gpt-engineer/
+
 # (Neo)Vim swap files
 *~
 *.swp
