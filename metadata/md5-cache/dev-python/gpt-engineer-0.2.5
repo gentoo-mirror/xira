@@ -1,0 +1,16 @@
+BDEPEND=dev-python/poetry test? ( python_targets_python3_10? ( dev-lang/python:3.10[tk(+)] ) python_targets_python3_11? ( dev-lang/python:3.11[tk(+)] ) test? ( dev-python/pytest dev-python/pytest-cov ) =dev-python/openai-0.28.0 dev-python/typer dev-python/rudder-sdk-python dev-python/dataclasses-json dev-python/tiktoken dev-python/langchain[core,community] dev-python/python-dotenv dev-python/termcolor >=dev-python/pytest-7.3.1[python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) python_targets_python3_10? ( dev-lang/python:3.10 ) python_targets_python3_11? ( dev-lang/python:3.11 ) >=dev-python/gpep517-15[python_targets_python3_10(-)?,python_targets_python3_11(-)?] >=dev-python/poetry-core-1.6.1[python_targets_python3_10(-)?,python_targets_python3_11(-)?]
+DEFINED_PHASES=compile configure install prepare test
+DESCRIPTION=Python module created for code generation using machine learning
+EAPI=8
+HOMEPAGE=https://github.com/gpt-engineer-org/gpt-engineer https://pypi.org/project/gpt-engineer
+INHERIT=distutils-r1 pypi python-r1
+IUSE=test python_targets_python3_10 python_targets_python3_11
+KEYWORDS=-test -docs
+LICENSE=MIT
+RDEPEND=python_targets_python3_10? ( dev-lang/python:3.10[tk(+)] ) python_targets_python3_11? ( dev-lang/python:3.11[tk(+)] ) test? ( dev-python/pytest dev-python/pytest-cov ) =dev-python/openai-0.28.0 dev-python/typer dev-python/rudder-sdk-python dev-python/dataclasses-json dev-python/tiktoken dev-python/langchain[core,community] dev-python/python-dotenv dev-python/termcolor python_targets_python3_10? ( dev-lang/python:3.10 ) python_targets_python3_11? ( dev-lang/python:3.11 )
+REQUIRED_USE=|| ( python_targets_python3_10 python_targets_python3_11 )
+RESTRICT=mirror !test? ( test )
+SLOT=0
+SRC_URI=https://files.pythonhosted.org/packages/source/g/gpt-engineer/gpt_engineer-0.2.5.tar.gz
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	78cf3cc2d5572fddf5e5e10c70f7c81a	out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	d67e78a235f541871c7dfe4cf7931489	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	c8951c1dfcc1d43e3f967f61fd0ec59c	python-utils-r1	474cb53a7d1b62721a91809a1d702661	python-r1	8a28fa6d3e3bc96ff8a7eff2badbe71f	distutils-r1	8e0ad2c111b259a711c8eaef98a17690	pypi	2eecb475512bc76e5ea9192a681b9e6b
+_md5_=56a94dba45c9254aa236e544ce2c93cd
