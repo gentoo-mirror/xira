@@ -7,8 +7,11 @@ app-misc/premid 2.3.3 9999: PreMiD adds Discord Rich Presence support to a lot o
 app-shells/elvish 0.19.2 9999: An expressive programming language and interactive shell
 app-text/sioyek 2.0.0: Sioyek is a PDF viewer with a focus on textbooks and research papers
 dev-python/blobfile 2.1.1: Read Google Cloud Storage, Azure Blobs, and local paths with the same interface
+dev-python/chevron 0.14.0: Mustache templating language renderer
 dev-python/clickgen 2.1.3: The hassle-free cursor building toolbox
 dev-python/dataclasses-json 0.6.3: Easily serialize dataclasses to and from JSON
+dev-python/dissect-cstruct 3.11: A Dissect module implementing a parser for C-like structures
+dev-python/dissect-cstruct_legacy 2.0: A no-nonsense c-like structure parsing library for Python
 dev-python/dunamai 1.19.0: Plugin for Poetry to enable dynamic versioning based on VCS tags
 dev-python/gpt-engineer 0.2.5: Python module created for code generation using machine learning
 dev-python/langchain 0.0.352: ⚡ Building applications with LLMs through composability ⚡
