@@ -19,11 +19,9 @@ MY_PV="${PV/\_/\-}"
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="${REPO_URI}"
-	# Doesn't seem to work anymore
-	# TODO: Update? Pull request still open
-	#PATCHES=(
-	#	"${FILESDIR}/fix-gtk3-apply-crashing.patch"
-	#)
+	PATCHES=(
+		"${FILESDIR}/fix-gtk3-apply-crashing.patch"
+	)
 else
 	SRC_URI="${REPO_URI}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 	S="${WORKDIR}/Gradience-${MY_PV}"

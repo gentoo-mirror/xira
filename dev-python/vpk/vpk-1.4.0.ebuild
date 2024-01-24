@@ -18,8 +18,6 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="-test"
 
-RESTRICT="mirror"
-
 RDEPEND="
 	test? (
 		dev-python/coverage
