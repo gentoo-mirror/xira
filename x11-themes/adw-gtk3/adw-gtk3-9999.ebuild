@@ -21,7 +21,7 @@ SLOT="0"
 
 BDEPEND="
 	dev-lang/sassc
-	dev-util/ninja
+	dev-build/ninja
 "
 
 src_compile() {
