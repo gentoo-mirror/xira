@@ -18,6 +18,8 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS=""
 
+RESTRICT="mirror"
+
 RDEPEND="
 	>=dev-python/pillow-8.1.1
 	dev-python/toml

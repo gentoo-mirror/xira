@@ -1,6 +1,15 @@
 <h1 align="center"><i>Xira</i></h1>
 <p align="center"><i>~ An LLVM-centric Portage overlay ~</i></p>
 
+## Package count
+2023-12-22 03:50 CEST: 72
+
+Counted by:
+```
+ls -Fd */* | grep '/$' | grep -Ev '^(profiles|metadata)' | wc -l
+```
+<i>Taken from [another cool overlay](https://github.com/stefantalpalaru/gentoo-overlay)</i>
+
 ## ⚠️ Experimental nature ⚠️
 I don't advise you use this overlay without the 17.1 clang/23.0 llvm profile selected, preferably the modified ones here, which use 23.0 llvm\[-systemd\] profiles.  
 This project is also in its early stage, which might cause frequent changes, and future plans.  
