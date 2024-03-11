@@ -1,0 +1,13 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=install postinst unpack
+DESCRIPTION=Natron Community Plugins
+EAPI=8
+HOMEPAGE=https://github.com/NatronGitHub/natron-plugins https://discuss.pixls.us/c/software/natron
+INHERIT=git-r3
+LICENSE=GPL-2 CC-BY-2.0
+PROPERTIES=live
+RDEPEND=media-video/natron-bin
+RESTRICT=mirror
+SLOT=0
+_eclasses_=git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_md5_=07a1ba6306bb5184056eac344471ddb3

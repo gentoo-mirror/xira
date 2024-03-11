@@ -3,14 +3,38 @@ acct-user/dendrite 0: Account for the dendrite homeserver
 app-containers/waydroid 1.3.4 1.4.1 9999: Container-based approach to boot a full Android system on Linux systems
 app-crypt/mkp224o 1.6.1 9999: Vanity address generator for v3 onion hidden services
 app-misc/colorgen-nvim 9999: Blazingly fast colorscheme generator for Neovim, written in Rust
+app-misc/premid 2.3.3 9999: PreMiD adds Discord Rich Presence support to a lot of services you use and love
 app-shells/elvish 0.19.2 9999: An expressive programming language and interactive shell
 app-text/sioyek 2.0.0: Sioyek is a PDF viewer with a focus on textbooks and research papers
+dev-python/blobfile 2.1.1: Read Google Cloud Storage, Azure Blobs, and local paths with the same interface
+dev-python/chevron 0.14.0: Mustache templating language renderer
 dev-python/clickgen 2.1.3: The hassle-free cursor building toolbox
+dev-python/dataclasses-json 0.6.3: Easily serialize dataclasses to and from JSON
+dev-python/dissect-cstruct 3.11: A Dissect module implementing a parser for C-like structures
+dev-python/dissect-cstruct_legacy 2.0: A no-nonsense c-like structure parsing library for Python
+dev-python/dunamai 1.19.0: Plugin for Poetry to enable dynamic versioning based on VCS tags
+dev-python/gpt-engineer 0.2.5: Python module created for code generation using machine learning
+dev-python/langchain 0.0.352: ⚡ Building applications with LLMs through composability ⚡
+dev-python/langchain-cli 0.0.20: The official CLI for LangChain
+dev-python/langchain-community 0.0.6: Community contributed LangChain integrations
+dev-python/langchain-core 0.1.3: ⚡ Building applications with LLMs through composability ⚡
+dev-python/langserve 0.0.37: LangServe helps developers deploy LangChain runnables and chains as a REST API
+dev-python/langsmith 0.0.75: Client library to connect to the LangSmith LLM Tracing and Evaluation Platform
+dev-python/monotonic 1.6: An implementation of time.monotonic() for Python 2 & < 3.3
+dev-python/openai 0.28.0 1.6.1: The official Python library for the OpenAI API
+dev-python/poetry-dynamic-versioning 1.2.0: Plugin for Poetry to enable dynamic versioning based on VCS tags
+dev-python/pycryptodomex 3.19.0: Cryptographic library for Python
 dev-python/pykeepass 4.0.6: 
+dev-python/rudder-sdk-python 2.0.2: Python SDK for event streaming in RudderStack
+dev-python/tiktoken 0.5.2: Tiktoken is a fast BPE tokeniser for use with OpenAI's models.
 dev-python/toml 0.10.2: Python Library for Tom's Obvious, Minimal Language
+dev-python/typer 0.9.0: Typer, build great CLIs. Easy to code. Based on Python type hints
+dev-python/typing-inspect 0.9.0: The official Python library for the OpenAI API
 dev-python/vpk 1.4.0: Open, Search, Extract and Create VPKs in python
 dev-tex/texlab 9999: An implementation of LSP for LaTeX
 dev-util/exercism 3.2.0 9999: A Go based command line tool for exercism.org
+dev-util/ghidra-bin 11.0: Ghidra is a software reverse engineering (SRE) framework
+games-util/r2mod_cli 1.3.3 9999: A Risk of Rain 2 Mod Manager in Bash
 games-util/spcomp-bin 1.11-r6952 1.12-r7093: SourcePawn compiler developed by the SourceMod team
 games-util/vpk-fuse 9999 20230415: FUSE filesystem to read Valve VPK files
 gnome-base/gsettings-desktop-schemas 45.0: Collection of GSettings schemas for GNOME desktop
@@ -29,11 +53,16 @@ gui-wm/hikari 9999: Wayland compositor inspired by CWM
 media-fonts/inter 4.0-r2: The Inter font family
 media-fonts/noto-emoji 999999999: An open source emoji font from Google
 media-gfx/darktable 4.4.2-r2: A virtual lighttable and darkroom for photographers
+media-gfx/gmic 3.3.2-r100: GREYC's Magic Image Converter
 media-gfx/inkscape 1.2.2-r99: SVG based generic vector-drawing program
 media-gfx/processing-bin 4.3: Visual context programming language
 media-video/celluloid 0.25 9999: A simple GTK+ frontend for mpv
+media-video/davinci-resolve 18.6.4: Professional A/V post-production software suite
+media-video/natron-bin 2.5.0: Node-graph based open-source compositing software
+media-video/natron-plugins 9999: Natron Community Plugins
 net-matrix/dendrite 9999: A second-generation Matrix homeserver written in Go
 net-misc/aria2 1.36.0: A lightweight multi-protocol download utility
+sys-apps/gendesk 1.0.9 9999: Generate .desktop files and download .png icons by specifying a minimum of information
 sys-boot/limine 5.20230801.0 5.20230819.0: A modern, advanced, portable, multiprotocol bootloader
 sys-config/stylize 0.1.1: A configuration for portage to make building with LTO easy
 www-apps/airlift-bin 0.4.1: A self-hosted file upload and sharing service
