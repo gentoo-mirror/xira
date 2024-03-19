@@ -5,6 +5,10 @@ dev-lang/ghc/
 sys-devel/gcc/
 games-util/ambuild/
 
+# Only used when main repo's Disc*rd is outdated.
+# A better alternative is to stop using it.
+net-im/
+
 # (Neo)Vim swap files
 *~
 *.swp
