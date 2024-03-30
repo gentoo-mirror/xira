@@ -1,7 +1,8 @@
-# Copyright 2023 Kirixetamine <revelation@krxt.dev>
+# Copyright 2024 Kirixetamine <revelation@krxt.dev>
 # Distributed under the terms of the ISC License
 
 EAPI=7
+RESTRICT="mirror"
 
 inherit meson gnome2-utils xdg-utils
 
@@ -9,15 +10,12 @@ DESCRIPTION="A customizable and extensible shell"
 HOMEPAGE="https://github.com/Aylur/ags"
 
 GVC_URI="https://gitlab.gnome.org/GNOME/libgnome-volume-control"
-GVC_COMMIT="dbfbacc9571fade87855907b78c6ed5e27c910dd"
-
-GI_URI="https://gitlab.gnome.org/BrainBlasted/gi-typescript-definitions"
-GI_COMMIT="eb2a87a25c5e2fb580b605fbec0bd312fe34c492"
+GVC_COMMIT="91f3f41490666a526ed78af744507d7ee1134323"
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/Aylur/ags"
-	EGIT_SUBMODULES=( "subprojects/gvc" "gi-types" )
+	EGIT_SUBMODULES=( "subprojects/gvc" )
 else
 	SRC_URI="
 		$HOMEPAGE/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
@@ -46,38 +44,30 @@ DEPEND="
 BDEPEND="
 	net-libs/nodejs
 	dev-lang/typescript
-	dev-util/meson
 "
-
-PATCHES=(
-	"${FILESDIR}/typescript-error-suppression.patch"
-)
 
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then
 		git-r3_src_unpack
+		default
 	else
 		default
-		rmdir ${WORKDIR}/${P}/subprojects/gvc || die
-		rmdir ${WORKDIR}/${P}/gi-types || die
-		ln -sv "${WORKDIR}/libgnome-volume-control-${GVC_COMMIT}" ${WORKDIR}/${P}/subprojects/gvc || die
-		ln -sv "${WORKDIR}/gi-typescript-definitions-${GI_COMMIT}" ${WORKDIR}/${P}/gi-types || die
 	fi
 }
 
 src_configure() {
 	default
 	npm install
-	meson setup build --prefix /usr
+	meson setup build --prefix /usr || die
 }
 
 src_compile() {
 	default
-	meson_src_compile -C build
+	meson_src_compile -C build || die
 }
 
 src_install() {
-	meson_src_install -C build --destdir "${D}"
+	meson_src_install -C build --destdir "${D}" || die
 }
 
 pkg_postinst() {
