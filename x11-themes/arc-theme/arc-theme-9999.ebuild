@@ -1,4 +1,4 @@
-# Copyright 2023 Kirixetamine
+# Copyright 2024 Kirixetamine <revelation@krxt.dev>
 # Distributed under the terms of the ISC License
 
 EAPI=8
@@ -19,7 +19,7 @@ fi
 
 IUSE="+gtk2 +gtk3 +gtk4 +transparency gnome-shell cinnamon xfce"
 
-LICENSE="GPL-3.0"
+LICENSE="GPL-3"
 SLOT="0"
 
 DEPEND="
@@ -30,7 +30,6 @@ RDEPEND="${DEPEND}"
 
 MY_BDEPEND="
 	${PYTHON_DEPS}
-	dev-util/meson
 	dev-lang/sassc
 	dev-libs/glib
 	cinnamon? ( gnome-extra/cinnamon )
