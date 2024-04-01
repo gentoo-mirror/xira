@@ -10,5 +10,5 @@ LICENSE=MPL-2.0
 PROPERTIES=live
 RESTRICT=mirror build-online? ( network-sandbox )
 SLOT=0
-_eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3	git-r3	86fa1f157b70b9d2ff340c4633b1cf4b
+_eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3	git-r3	fbb2889c81f3a05910c1524db69425c1
 _md5_=7f678d411a74edfc72ebb43479a72d6d
