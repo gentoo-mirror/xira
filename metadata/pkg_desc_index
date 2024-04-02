@@ -34,6 +34,7 @@ dev-python/vpk 1.4.0: Open, Search, Extract and Create VPKs in python
 dev-tex/texlab 9999: An implementation of LSP for LaTeX
 dev-util/exercism 3.2.0 9999: A Go based command line tool for exercism.org
 dev-util/ghidra-bin 11.0: Ghidra is a software reverse engineering (SRE) framework
+dev-util/lddtree-sh 1.27: POSIX shell fork of lddtree.sh from Gentoo's pax-utils
 games-util/r2mod_cli 1.3.3 9999: A Risk of Rain 2 Mod Manager in Bash
 games-util/spcomp-bin 1.11-r6952 1.12-r7093: SourcePawn compiler developed by the SourceMod team
 games-util/vpk-fuse 9999 20230415: FUSE filesystem to read Valve VPK files
