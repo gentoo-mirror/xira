@@ -1,0 +1,23 @@
+From fe1f027281b3b4c079806a6ef269591838438fc3 Mon Sep 17 00:00:00 2001
+From: Shootfast <markboo99@gmail.com>
+Date: Fri, 15 Mar 2024 15:51:39 +0000
+Subject: [PATCH] lddtree: Respect LD_LIBRARY_PATH when resolving dependency
+
+The code was not early returning after finding the correct elf along LD_LIBRARY_PATH, which resulted in incorrect libraries being returned, particularly if there was an alternate lib in the default system location.
+---
+ lddtree.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/lddtree.sh b/lddtree.sh
+index 6cca1c2..3c5b29d 100644
+--- a/lddtree.sh
++++ b/lddtree.sh
+@@ -136,7 +136,7 @@ find_elf() {
+ 		fi
+ 
+ 		if [ -n "${LD_LIBRARY_PATH}" ] ; then
+-			check_paths "${elf}" "${LD_LIBRARY_PATH}"
++			check_paths "${elf}" "${LD_LIBRARY_PATH}" && return 0
+ 		fi
+ 
+ 		if ! ${c_ldso_paths_loaded} ; then
