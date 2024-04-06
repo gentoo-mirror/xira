@@ -1,8 +1,6 @@
 tmp/
 sys-apps/memtest86+/
 gnome-base/gnome-shell/
-dev-lang/ghc/
-sys-devel/gcc/
 games-util/ambuild/
 
 # Only used when main repo's Disc*rd is outdated.
