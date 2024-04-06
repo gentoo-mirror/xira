@@ -63,6 +63,7 @@ media-video/natron-plugins 9999: Natron Community Plugins
 net-matrix/dendrite 9999: A second-generation Matrix homeserver written in Go
 net-misc/aria2 1.36.0: A lightweight multi-protocol download utility
 sys-apps/gendesk 1.0.9 9999: Generate .desktop files and download .png icons by specifying a minimum of information
+sys-block/hddrand 20230116: Benchmark drive writes with non-compressible data or wipe disks with random content
 sys-boot/limine 5.20230801.0 5.20230819.0: A modern, advanced, portable, multiprotocol bootloader
 sys-config/stylize 0.1.1: A configuration for portage to make building with LTO easy
 www-apps/airlift-bin 0.4.1: A self-hosted file upload and sharing service
