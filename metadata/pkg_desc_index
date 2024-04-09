@@ -4,30 +4,9 @@ app-misc/colorgen-nvim 9999: Blazingly fast colorscheme generator for Neovim, wr
 app-misc/premid 2.3.3 9999: PreMiD adds Discord Rich Presence support to a lot of services you use and love
 app-shells/elvish 0.19.2 9999: An expressive programming language and interactive shell
 app-text/sioyek 2.0.0: Sioyek is a PDF viewer with a focus on textbooks and research papers
-dev-python/blobfile 2.1.1: Read Google Cloud Storage, Azure Blobs, and local paths with the same interface
-dev-python/chevron 0.14.0: Mustache templating language renderer
 dev-python/clickgen 2.1.3: The hassle-free cursor building toolbox
-dev-python/dataclasses-json 0.6.3: Easily serialize dataclasses to and from JSON
-dev-python/dissect-cstruct 3.11: A Dissect module implementing a parser for C-like structures
-dev-python/dissect-cstruct_legacy 2.0: A no-nonsense c-like structure parsing library for Python
-dev-python/dunamai 1.19.0: Plugin for Poetry to enable dynamic versioning based on VCS tags
-dev-python/gpt-engineer 0.2.5: Python module created for code generation using machine learning
-dev-python/langchain 0.0.352: ⚡ Building applications with LLMs through composability ⚡
-dev-python/langchain-cli 0.0.20: The official CLI for LangChain
-dev-python/langchain-community 0.0.6: Community contributed LangChain integrations
-dev-python/langchain-core 0.1.3: ⚡ Building applications with LLMs through composability ⚡
-dev-python/langserve 0.0.37: LangServe helps developers deploy LangChain runnables and chains as a REST API
-dev-python/langsmith 0.0.75: Client library to connect to the LangSmith LLM Tracing and Evaluation Platform
-dev-python/monotonic 1.6: An implementation of time.monotonic() for Python 2 & < 3.3
-dev-python/openai 0.28.0 1.6.1: The official Python library for the OpenAI API
-dev-python/poetry-dynamic-versioning 1.2.0: Plugin for Poetry to enable dynamic versioning based on VCS tags
-dev-python/pycryptodomex 3.19.0: Cryptographic library for Python
 dev-python/pykeepass 4.0.6: 
-dev-python/rudder-sdk-python 2.0.2: Python SDK for event streaming in RudderStack
-dev-python/tiktoken 0.5.2: Tiktoken is a fast BPE tokeniser for use with OpenAI's models.
 dev-python/toml 0.10.2: Python Library for Tom's Obvious, Minimal Language
-dev-python/typer 0.9.0: Typer, build great CLIs. Easy to code. Based on Python type hints
-dev-python/typing-inspect 0.9.0: The official Python library for the OpenAI API
 dev-python/vpk 1.4.0: Open, Search, Extract and Create VPKs in python
 dev-tex/texlab 9999: An implementation of LSP for LaTeX
 dev-util/exercism 3.2.0 9999: A Go based command line tool for exercism.org
