@@ -1,0 +1,11 @@
+diff --git a/meson.build b/meson.build
+index d5ad6f2..da3744c 100644
+--- a/meson.build
++++ b/meson.build
+@@ -1,5 +1,5 @@
+ project('ags', 'c',
+-          version: run_command('cat', join_paths(meson.project_source_root(), 'version')).stdout().strip(),
++          version: run_command('cat', join_paths(meson.project_source_root(), 'version'), check : true).stdout().strip(),
+     meson_version: '>= 0.62.0',
+     	  license: ['GPL-3.0-or-later'],
+   default_options: [ 'warning_level=2', 'werror=false', ],
