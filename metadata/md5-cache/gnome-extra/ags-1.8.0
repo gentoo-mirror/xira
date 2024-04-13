@@ -1,0 +1,16 @@
+BDEPEND=net-libs/nodejs dev-lang/typescript >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array
+DEFINED_PHASES=compile configure install postinst prepare test unpack
+DEPEND=dev-libs/gjs x11-libs/gtk+ gui-libs/gtk-layer-shell[introspection] net-wireless/gnome-bluetooth sys-power/upower net-misc/networkmanager dev-libs/gobject-introspection dev-libs/libdbusmenu[gtk3]
+DESCRIPTION=A customizable and extensible shell
+EAPI=7
+HOMEPAGE=https://github.com/Aylur/ags
+INHERIT=meson gnome2-utils xdg-utils
+IUSE=hyprland
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=hyprland? ( gui-wm/hyprland )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/Aylur/ags/releases/download/v1.8.0/ags-v1.8.0.tar.gz -> ags-1.8.0.tar.gz https://github.com/Aylur/ags/releases/download/v1.8.0/node_modules-v1.8.0.tar.gz
+_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	288c54efeb5e2aa70775e39032695ad4	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	eapi8-dosym	5ac4857ad078256d939c44f7c64197a9	python-utils-r1	a1229a86bd0db058e474a2d7d9191cca	meson	92696988eaddba122c4cedc191f59bcb	xdg-utils	baea6080dd821f5562d715887954c9d3	gnome2-utils	30dbce54b89e77b86f366548f94419ad
+_md5_=745f858765509e21d8fa413fa2a456e1
