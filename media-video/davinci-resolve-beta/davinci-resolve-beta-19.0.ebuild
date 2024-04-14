@@ -4,7 +4,7 @@
 EAPI=8
 
 MAJOR_VER="$(ver_cut 1-4)"
-
+MAJOR_VER="19.0b1"
 if [[ "${PN}" == "davinci-resolve-studio" ]] ; then
 	BASE_NAME="DaVinci_Resolve_Studio_${MAJOR_VER}_Linux"
 	CONFLICT_PKG="!!media-video/davinci-resolve"
@@ -17,9 +17,8 @@ else
 	BASE_NAME="DaVinci_Resolve_${MAJOR_VER}_Linux"
 	CONFLICT_PKG="!!media-video/davinci-resolve-studio"
 fi
-
 ARC_NAME="${BASE_NAME}.zip"
-MRD_VER=1.6.4
+MRD_VER=1.7.0
 inherit udev xdg
 
 DESCRIPTION="Professional A/V post-production software suite"
