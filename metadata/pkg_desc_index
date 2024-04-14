@@ -35,6 +35,7 @@ media-gfx/inkscape 1.2.2-r99: SVG based generic vector-drawing program
 media-gfx/processing-bin 4.3: Visual context programming language
 media-video/celluloid 0.25 9999: A simple GTK+ frontend for mpv
 media-video/davinci-resolve 18.6.4: Professional A/V post-production software suite
+media-video/davinci-resolve-beta 19.0: Professional A/V post-production software suite
 media-video/natron-bin 2.5.0: Node-graph based open-source compositing software
 media-video/natron-plugins 9999: Natron Community Plugins
 net-misc/aria2 1.36.0: A lightweight multi-protocol download utility
