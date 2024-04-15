@@ -1,9 +1,0 @@
-diff --git work/wayshot-9999/Cargo.toml work/wayshot-9999/Cargo.toml
-index 70b3ace..68b4029 100644
---- work/wayshot-9999/Cargo.toml
-+++ work/wayshot-9999/Cargo.toml
-@@ -3,3 +3,4 @@ members = [
- 	"wayshot",
- 	"libwayshot",
- ]
-+resolver = "2"
