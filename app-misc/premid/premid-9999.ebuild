@@ -7,8 +7,8 @@ inherit xdg-utils
 
 DESCRIPTION="PreMiD adds Discord Rich Presence support to a lot of services you use and love"
 HOMEPAGE="https://github.com/PreMiD/Linux"
-EPOCH_STAMP="1652526171"
-MY_PV="${PV}-${EPOCH_STAMP}"
+#EPOCH_STAMP="1703429315"
+#MY_PV="${PV}-${EPOCH_STAMP}"
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
@@ -16,12 +16,9 @@ if [[ ${PV} == 9999 ]]; then
 	S="${WORKDIR}/${P}"
 else
 	SRC_URI="
-		https://github.com/PreMiD/Linux/archive/refs/tags/v${PV}-${EPOCH_STAMP}.tar.gz -> ${P}.tar.gz
-		!build-online? (
-			https://dist.krxt.dev/app-misc/${PN}/${PN}-${PV}-node_modules.tar.xz
-		)
+		https://github.com/PreMiD/Linux/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 	"
-	S="${WORKDIR}/Linux-${MY_PV}"
+	S="${WORKDIR}/Linux-${PV}"
 	KEYWORDS="~amd64"
 fi
 
@@ -48,18 +45,13 @@ src_unpack() {
 }
 
 src_configure() {
-	yarn config set disable-self-update-check		       				|| die
-	if ! use build-online; then
-		ewarn "This mode is NOT guaranteed to work"
-		ewarn "due to how PreMiD deals with dependencies."
-
-		einfo "If this fails, please set USE=build-online."
-		einfo "If you have a way to make this work,"
-		einfo "Please file an issue on GitHub."
-		NETWORK_MODE="--offline"
-		# TODO: rename that directory to node_modules
-	    yarn config set yarn-offline-mirror "${WORKDIR}/npm-packages"	|| die
+	if ! use build-online ; then
+		eerror "PreMiD does not provide node_modules, and USE flag build-online"
+		eerror "is not enabled. Please enable the build-online flag."
+		eerror "Aborting."
+		die
 	fi
+	yarn config set disable-self-update-check		       				|| die
 	mv ${HOME}/.yarnrc ${S}/.yarnrc						    			|| die
 	yarn install --frozen-lockfile ${NETWORK_MODE}				        || die
 }

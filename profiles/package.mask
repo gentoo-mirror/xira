@@ -1,5 +1,5 @@
 # Does not build using Clang
 =media-gfx/inkscape-1.3
 
-# Currently broken due to npm (net-libs/nodejs) network access issues
-gnome-extra/ags
+# darcs Eclass does not work yet
+gui-wm/hikari
