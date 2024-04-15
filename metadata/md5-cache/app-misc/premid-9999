@@ -11,4 +11,4 @@ PROPERTIES=live
 RESTRICT=mirror build-online? ( network-sandbox )
 SLOT=0
 _eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3	git-r3	fbb2889c81f3a05910c1524db69425c1
-_md5_=7f678d411a74edfc72ebb43479a72d6d
+_md5_=79fad512604794547f249801fcc55773
