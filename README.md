@@ -1,8 +1,8 @@
 <h1 align="center"><i>Xira</i></h1>
-<p align="center"><i>~ An LLVM-centric Portage overlay ~</i></p>
+<p align="center"><i>~ A Clang-optimized Portage overlay ~</i></p>
 
-## Package count
-2023-12-22 03:50 CEST: 72
+### Package count
+45 (2024-04-15 05:59 CEST)
 
 Counted by:
 ```
@@ -10,11 +10,15 @@ ls -Fd */* | grep '/$' | grep -Ev '^(profiles|metadata)' | wc -l
 ```
 <i>Taken from [a very cool overlay](https://github.com/stefantalpalaru/gentoo-overlay)</i>
 
-#### Note
-The LLVM profiles from here use the main repo ones as `parent`, but contain extra changes, through `features/stylize`.
-Most notably setting `-fsplit-lto-unit` in C(XX)FLAGS, which requires e.g. LLVM and Qt packages being rebuilt, if they don't use it.
+# Overview
+This is a personal portage overlay, which was initially created with a goal in mind of adding patches to C/C++ programs which can't compile on Clang either with default CFLAGS, or with my more extreme ones (per `features/stylize`).
 
-If you have any suggestions or think something's wrong with it, please make an issue or PR.
+Due to certain... reasons... IRL, after August of 2023 I haven't had any motivation to do anything, including modifying anything here. My motivation has been coming back as of writing, but I've shifted the goal, as I don't think I could maintain what I had in mind myself, and most things seem to build with my settings, or without `-flto`.
+
+Now this repo is *primarily* for packages related to gnome, such as video-trimmer or secrets, and Source Engine/SRCDS related tools. The rest is programs I haven't seen packaged in any other repo.
+
+> [!NOTE]
+> I want to keep this repo relatively minimal for ease of maintenance. Before remaking this README, there were 72 ebuilds in total.
 
 ## Enabling
 To enable this overlay, use [eselect-repository](https://wiki.gentoo.org/wiki/Eselect/Repository).
@@ -25,18 +29,29 @@ emaint sync -r xira
 
 ## Information
 ### License info
-Every ebuild I wrote here is licensed under ISC.
+Every ebuild I wrote here is licensed under the ISC License.
 Ebuilds I have copied from e.g. the main repository preserve their original GPLv2 header and authors.
-I am not a legal expert. As far as I understand ISC is GPLv2 compatible, but if there are any issues, please make an issue or message me [here](https://to.stylism.moe/#/@revelation:stylism.moe/).
+> [!IMPORTANT]
+> I am not a legal expert. As far as I understand ISC is GPLv2 compatible, but if there are any issues, please make an issue or message me [here](https://to.stylism.moe/#/@revelation:stylism.moe/).
 
 ### Requirements
-- x86-64-v3 compatible machine
-    - CFLAGS in profiles and some ebuilds explicitly state `-march=x86-64-v3`, as of 2024-04-08.
+- GURU Overlay
+    - Some ebuilds might have dependencies that exist only in the GURU overlay. [//]: # "TODO: Explain which ebuilds require this, please."
+#### Recommendations
 - LLVM profile
     - Best is to install using the LLVM stage3.
     - Use either the main repository LLVM profile, or the `llvm-desktop` profiles here. I personally use llvm-systemd-desktop-gnome on my systems.
-- GURU Overlay
-    - Some ebuilds might have dependencies that exist only in the GURU overlay.
+- x86-64-v3 compatible machine
+    - CFLAGS in profiles and some ebuilds explicitly state `-march=x86-64-v3`, as of 2024-04-08.
+
+> [!NOTE]
+> Everything in this repository should compile using either LLVM/Clang or GCC.\
+> I only test using portage settings from `features/stylize`, i.e. ThinLTO, x86-64-v3, LLVM toolchain.\
+
+> [!WARNING]
+> The LLVM profiles from here use the main repo ones as `parent`, but contain extra changes, through `features/stylize`.
+> Most notably setting `-fsplit-lto-unit` in C(XX)FLAGS, which requires e.g. LLVM and **ALL** installed Qt packages being rebuilt, if they don't use it.\
+> If you have any suggestions or think something's wrong with it, please make an issue or PR.
 
 ### What's in here?
 A directory structure and explanations are listed below.
@@ -57,7 +72,7 @@ xira
     └── openwrt-prequisites
 ```
 - profiles
-    - features/stylize<sup>†</sup>
+    - features/stylize
         - Primary features, currently including: \*FLAGS changes.
 - sets
     - llvm-complete
