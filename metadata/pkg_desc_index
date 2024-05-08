@@ -1,5 +1,5 @@
 app-crypt/mkp224o 1.7.0: Vanity address generator for v3 onion hidden services
-app-misc/colorgen-nvim 0.1.0: Blazingly fast colorscheme generator for Neovim, written in Rust
+app-misc/colorgen-nvim 0.1.0: Neovim colorscheme generator
 app-misc/premid 9999: PreMiD adds Discord Rich Presence support to a lot of services you use and love
 app-shells/elvish 0.20.1: An expressive programming language and interactive shell
 app-text/sioyek 2.0.0: Sioyek is a PDF viewer with a focus on textbooks and research papers
@@ -33,7 +33,7 @@ media-video/davinci-resolve-beta 19.0: Professional A/V post-production software
 media-video/natron-bin 2.5.0: Node-graph based open-source compositing software
 media-video/natron-plugins 9999: Natron Community Plugins
 sys-apps/gendesk 1.0.9 9999: Generate .desktop files and download .png icons by specifying a minimum of information
-sys-block/hddrand 20230116: Benchmark drive writes with non-compressible data or wipe disks with random content
+sys-block/hddrand 20230116: Drive wipe/verification and benchmarking tool
 sys-boot/limine 5.20230819.0: A modern, advanced, portable, multiprotocol bootloader
 www-apps/airlift-bin 0.4.1: A self-hosted file upload and sharing service
 x11-themes/adw-gtk3 9999: The theme from libadwaita ported to GTK-3
