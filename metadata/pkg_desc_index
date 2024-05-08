@@ -4,7 +4,7 @@ app-misc/premid 9999: PreMiD adds Discord Rich Presence support to a lot of serv
 app-shells/elvish 0.20.1: An expressive programming language and interactive shell
 app-text/sioyek 2.0.0: Sioyek is a PDF viewer with a focus on textbooks and research papers
 dev-python/clickgen 2.1.3: The hassle-free cursor building toolbox
-dev-python/pykeepass 4.0.6: 
+dev-python/pykeepass 4.0.7: 
 dev-python/toml 0.10.2: Python Library for Tom's Obvious, Minimal Language
 dev-python/vpk 1.4.0: Open, Search, Extract and Create VPKs in python
 dev-tex/texlab 5.16.0: LaTeX Language Server (LSP)
@@ -25,19 +25,16 @@ gui-apps/wl-clip-persist 0.3.1: Keep Wayland clipboard after programs close
 gui-wm/hikari 9999: Wayland compositor inspired by CWM
 media-fonts/inter 4.0-r2: The Inter font family
 media-fonts/noto-emoji 999999999: An open source emoji font from Google
-media-gfx/darktable 4.4.2-r2: A virtual lighttable and darkroom for photographers
-media-gfx/gmic 3.3.2-r100: GREYC's Magic Image Converter
-media-gfx/inkscape 1.2.2-r99: SVG based generic vector-drawing program
+media-gfx/gmic 3.3.5-r100: GREYC's Magic Image Converter
 media-gfx/processing-bin 4.3: Visual context programming language
 media-video/celluloid 0.26: A simple GTK+ frontend for mpv
 media-video/davinci-resolve 18.6.4: Professional A/V post-production software suite
 media-video/davinci-resolve-beta 19.0: Professional A/V post-production software suite
 media-video/natron-bin 2.5.0: Node-graph based open-source compositing software
 media-video/natron-plugins 9999: Natron Community Plugins
-net-misc/aria2 1.36.0: A lightweight multi-protocol download utility
 sys-apps/gendesk 1.0.9 9999: Generate .desktop files and download .png icons by specifying a minimum of information
 sys-block/hddrand 20230116: Benchmark drive writes with non-compressible data or wipe disks with random content
-sys-boot/limine 5.20230801.0 5.20230819.0: A modern, advanced, portable, multiprotocol bootloader
+sys-boot/limine 5.20230819.0: A modern, advanced, portable, multiprotocol bootloader
 www-apps/airlift-bin 0.4.1: A self-hosted file upload and sharing service
 x11-themes/adw-gtk3 9999: The theme from libadwaita ported to GTK-3
 x11-themes/apple-cursor 9999: Open source macOS cursors
