@@ -26,7 +26,7 @@ KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror"
 
 BDEPEND="
-	sys-devel/make
+	dev-build/make
 	virtual/pkgconfig
 	sys-fs/fuse:0=
 "

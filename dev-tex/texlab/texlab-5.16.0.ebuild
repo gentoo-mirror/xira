@@ -204,7 +204,7 @@ KEYWORDS="~amd64"
 
 LICENSE="GPL-3"
 # Dependent crate licenses
-LICENSE+="Apache-2.0 BSD CC0-1.0 ISC MIT MPL-2.0 Unicode-DFS-2016"
+LICENSE+=" Apache-2.0 BSD CC0-1.0 ISC MIT MPL-2.0 Unicode-DFS-2016"
 SLOT="0"
 RESTRICT="mirror"
 

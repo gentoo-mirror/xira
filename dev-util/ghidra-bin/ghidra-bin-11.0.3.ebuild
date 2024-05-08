@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Kirixetamine <revelation@krxt.dev>
+# Copyright 2023-2024 Kirixetamine <revelation@krxt.dev>
 # Distributed under the terms of the ISC License.
 
 EAPI=8
@@ -7,8 +7,6 @@ inherit xdg-utils desktop savedconfig
 
 DESCRIPTION="Ghidra is a software reverse engineering (SRE) framework"
 HOMEPAGE="https://nsa.gov/ghidra"
-LICENSE="Apache-2.0"
-SLOT="0"
 
 DATE="20240410"
 MY_PN="ghidra"
@@ -18,11 +16,12 @@ MY_P="${MY_PN}_${MY_PV}"
 SRC_URI="https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_${PV}_build/${MY_P}.zip -> ${P}.zip"
 S="${WORKDIR}/${MY_PN}_${PV}_PUBLIC"
 
+LICENSE="Apache-2.0"
+SLOT="0"
 KEYWORDS="~amd64"
+SLOT="0"
+
 IUSE="+opengl +optimal-maxmemory"
-#REQUIRED_USE="
-#	savedconfig? ( !optimal-maxmemory )
-#"
 
 RESTRICT="mirror strip"
 
@@ -33,6 +32,10 @@ BDEPEND="
 	sys-apps/findutils
 	sys-apps/grep
 	sys-apps/sed
+"
+
+RDEPEND="
+	opengl? ( virtual/opengl )
 "
 
 src_prepare() {
@@ -54,12 +57,13 @@ src_install() {
 	if use opengl; then
 		# Lets GUI icons render properly on some systems, per the manual
 		einfo "OpenGL enabled, setting \"-DSun.java2d.opengl=true\" in VMARGS"
-		sed -i -e 's/VMARGS=-Dsun\.java2d\.opengl=false/VMARGS=-Dsun\.java2d\.opengl=true/' "${S}"/support/launch.properties || die "Could not replace OpenGL launch argument"
+		sed -i -e 's/VMARGS=-Dsun\.java2d\.opengl=false/VMARGS=-Dsun\.java2d\.opengl=true/' \
+			"${S}"/support/launch.properties || die "Could not replace OpenGL launch argument"
 	fi
 
 	einfo "Installing files to temporary directory"
-	dodir "${dest}"
 	insinto "${dest}"
+	dodir "${dest}"
 	doins -r .
 
 	dodir /usr/bin
@@ -73,7 +77,6 @@ src_install() {
 		cp "${S}/icon_app${i}.png" "${ED}/usr/share/icons/hicolor/${i}x${i}/apps/${MY_PN}.png"	|| die
 	done
 	domenu "${FILESDIR}/${MY_PN}.desktop"
-
 
 	# Is this really the best solution...? >~>
 	einfo "Finding all ELF files and running \`chmod\` on them, this can take a while."

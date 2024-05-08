@@ -43,7 +43,9 @@ src_compile() {
 }
 
 src_test() {
-	emake || die
+	if use test; then
+		emake || die
+	fi
 }
 
 src_install() {

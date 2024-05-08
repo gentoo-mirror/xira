@@ -86,10 +86,6 @@ fi
 LICENSE="MIT"
 SLOT="0"
 
-BDEPEND="
-	virtual/rust
-"
-
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then
 		git-r3_src_unpack

@@ -21,7 +21,7 @@ else
 		https://github.com/Aylur/ags/releases/download/v${PV}/${MY_NODE_D}-v${PV}.tar.gz
 	"
 	S="${WORKDIR}/${PN}"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64"
 fi
 
 LICENSE="GPL-3"
@@ -44,6 +44,8 @@ BDEPEND="
 	dev-lang/typescript
 "
 
+# FIXME: This should probably be avoided...
+# It's possibly redundant, ags is mostly used on hyprland.
 RDEPEND="
 	hyprland? ( gui-wm/hyprland )
 "
