@@ -212,9 +212,9 @@ BDEPEND="
 	virtual/rust
 "
 
-QA_PRESTRIPPED="usr/bin/${PN}"
-
 src_install() {
 	cargo_src_install --path ./crates/texlab
 	einstalldocs
 }
+
+QA_PRESTRIPPED="/usr/bin/${PN}"

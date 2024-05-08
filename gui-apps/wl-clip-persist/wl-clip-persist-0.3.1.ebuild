@@ -5,8 +5,6 @@
 
 EAPI=8
 
-RESTRICT="mirror"
-
 CRATES="
 	aho-corasick@0.7.18
 	atty@0.2.14
@@ -84,7 +82,10 @@ else
 fi
 
 LICENSE="MIT"
+# Dependent crate licenses
+LICENSE+=" ISC MIT Unicode-DFS-2016"
 SLOT="0"
+RESTRICT="mirror"
 
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then
@@ -94,3 +95,5 @@ src_unpack() {
 		cargo_src_unpack
 	fi
 }
+
+QA_PRESTRIPPED="/usr/bin/${PN}"
