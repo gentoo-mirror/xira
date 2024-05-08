@@ -231,7 +231,12 @@ SRC_URI="
 S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-3"
+# Dependent crate licenses
+LICENSE+="
+	Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD MIT Unicode-DFS-2016
+"
 SLOT="0"
+KEYWORDS="~amd64"
 
 DEPEND="
 	>=gui-libs/libadwaita-1.4.0
@@ -289,3 +294,5 @@ pkg_postrm() {
    xdg_desktop_database_update
    xdg_mimeinfo_database_update
 }
+
+QA_PRESTRIPPED="/usr/bin/${PN}"
