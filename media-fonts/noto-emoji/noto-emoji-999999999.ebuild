@@ -10,7 +10,7 @@ HOMEPAGE="https://fonts.google.com/noto/specimen/Noto+Emoji"
 
 PROPERTIES="live"
 
-LICENSE="OTF-1.1"
+LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~*"
 

@@ -51,9 +51,9 @@ src_configure() {
 		eerror "Aborting."
 		die
 	fi
-	yarn config set disable-self-update-check		       				|| die
-	mv ${HOME}/.yarnrc ${S}/.yarnrc						    			|| die
-	yarn install --frozen-lockfile ${NETWORK_MODE}				        || die
+	yarn config set disable-self-update-check							|| die
+	mv "${HOME}"/.yarnrc "${S}"/.yarnrc									|| die
+	yarn install --frozen-lockfile ${NETWORK_MODE}						|| die
 }
 
 src_compile() {
@@ -67,7 +67,7 @@ src_install() {
 	mkdir -p "${ED}/usr/share/applications"
 	mkdir -p "${ED}/usr/share/pixmaps"
 
-	pushd ${S}/dist/app/dist/linux-unpacked || die
+	pushd "${S}"/dist/app/dist/linux-unpacked || die
 		# QA notice about proper XDG Icon entry
 		sed -i 's/Icon=premid\.png/Icon=premid/' assets/premid.desktop
 

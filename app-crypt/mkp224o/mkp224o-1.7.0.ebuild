@@ -24,8 +24,8 @@ RESTRICT="mirror"
 
 BDEPEND="
 	dev-libs/libsodium
-	sys-devel/autoconf
-	sys-devel/make
+	dev-build/autoconf
+	dev-build/make
 "
 
 src_prepare() {

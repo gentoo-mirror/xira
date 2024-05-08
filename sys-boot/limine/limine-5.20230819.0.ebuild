@@ -9,10 +9,10 @@ DESCRIPTION="A modern, advanced, portable, multiprotocol bootloader"
 HOMEPAGE="https://limine-bootloader.org"
 SRC_URI="https://github.com/limine-bootloader/limine/releases/download/v${PV}/limine-${PV}.tar.xz"
 
-KEYWORDS="~amd64"
 LICENSE="BSD-2"
+KEYWORDS="~amd64"
 SLOT="0"
-IUSE="-gnu +bios +bios-pxe +bios-cd +cd-efi +uefi32 +uefi64 -uefiaa64 custom-cflags clang"
+IUSE="gnu +bios +bios-pxe +bios-cd +cd-efi +uefi32 +uefi64 uefiaa64 custom-cflags clang"
 
 MY_LLVM_TARGETS="AArch64 ARM X86"
 MY_LLVM_FLAGS="llvm_targets_${MY_LLVM_TARGETS// /(-),llvm_targets_}(-)"
@@ -24,8 +24,8 @@ BDEPEND="
 	sys-apps/coreutils
 	sys-apps/findutils
 	sys-apps/sed
-	sys-devel/autoconf
-	sys-devel/automake
+	dev-build/autoconf
+	dev-build/automake
 	clang? (
 		sys-devel/clang[${MY_LLVM_FLAGS}]
 		sys-devel/lld

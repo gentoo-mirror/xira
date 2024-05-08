@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>revelation@krxt.dev</email>
+		<name>Kirin Etheridge</name>
+	</maintainer>
+	<use>
+		<flag name="clang">Use LLVM/Clang for building</flag>
+		<flag name="gnu">Use GCC for building</flag>
+		<flag name="bios-pxe">Build the x86 BIOS PXE image</flag>
+		<flag name="bios-cd">Build the x86 BIOS CD image</flag>
+		<flag name="cd-efi">Build the UEFI CD image</flag>
+		<flag name="bios">Build the x86 BIOS port</flag>
+		<flag name="uefi32">Build the IA-32 UEFI port</flag>
+		<flag name="uefi64">Build the x86-64 UEFI port</flag>
+		<flag name="uefiaa64">Build the aarch64 UEFI port</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">limine-bootloader/limine</remote-id>
+	</upstream>
+</pkgmetadata>

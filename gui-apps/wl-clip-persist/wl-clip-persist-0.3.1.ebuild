@@ -85,7 +85,6 @@ LICENSE="MIT"
 # Dependent crate licenses
 LICENSE+=" ISC MIT Unicode-DFS-2016"
 SLOT="0"
-KEYWORDS="~amd64"
 RESTRICT="mirror"
 
 src_unpack() {

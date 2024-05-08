@@ -39,7 +39,7 @@ DEPEND="
 	dev-libs/wayland-protocols"
 BDEPEND="
 	dev-util/wayland-scanner
-	sys-devel/bmake
+	dev-build/bmake
 	virtual/pkgconfig"
 
 src_compile() {
