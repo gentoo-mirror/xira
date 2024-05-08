@@ -44,6 +44,8 @@ BDEPEND="
 	dev-lang/typescript
 "
 
+# FIXME: This should probably be avoided...
+# It's possibly redundant, ags is mostly used on hyprland.
 RDEPEND="
 	hyprland? ( gui-wm/hyprland )
 "

@@ -41,7 +41,7 @@ COMMON_DEPEND="
 		${QT_DEPS}
 	)
 	gimp3? (
-		=media-gfx/gimp-2.99.16
+		>=media-gfx/gimp-2.99.16
 		${QT_DEPS}
 	)
 	graphicsmagick? ( media-gfx/graphicsmagick:0= )

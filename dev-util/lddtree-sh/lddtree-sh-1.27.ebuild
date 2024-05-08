@@ -21,6 +21,7 @@ else
 fi
 
 IUSE="test"
+RESTRICT="!test ( test )"
 
 BDEPEND="
 	test? (
@@ -43,7 +44,9 @@ src_compile() {
 }
 
 src_test() {
-	emake || die
+	if use test; then
+		emake || die
+	fi
 }
 
 src_install() {
