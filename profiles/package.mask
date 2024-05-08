@@ -1,5 +1,2 @@
-# Does not build using Clang
-=media-gfx/inkscape-1.3
-
 # darcs Eclass does not work yet
 gui-wm/hikari
