@@ -1,0 +1,17 @@
+name: pkgcheck
+
+on:
+  push:
+    branches: [stream]
+  pull_request:
+    branches: [stream]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Run pkgcheck
+      uses: pkgcore/pkgcheck-action@v1
