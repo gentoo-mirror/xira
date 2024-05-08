@@ -1,0 +1,15 @@
+BDEPEND=dev-util/wayland-scanner sys-devel/bmake virtual/pkgconfig dev-vcs/darcs
+DEFINED_PHASES=compile install unpack
+DEPEND=dev-libs/glib:2 dev-libs/libinput:= dev-libs/libucl dev-libs/wayland gui-libs/wlroots:0/15[X?] sys-libs/pam x11-libs/cairo x11-libs/libxkbcommon x11-libs/pango x11-libs/pixman dev-libs/wayland-protocols
+DESCRIPTION=Wayland compositor inspired by CWM
+EAPI=8
+HOMEPAGE=https://hikari.acmelabs.space/
+INHERIT=multiprocessing toolchain-funcs darcs
+IUSE=X suid
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+PROPERTIES=live
+RDEPEND=dev-libs/glib:2 dev-libs/libinput:= dev-libs/libucl dev-libs/wayland gui-libs/wlroots:0/15[X?] sys-libs/pam x11-libs/cairo x11-libs/libxkbcommon x11-libs/pango x11-libs/pixman x11-misc/xkeyboard-config
+SLOT=0
+_eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	darcs	29b101bdc2e75df3d876df57d1ea1ff0
+_md5_=cc974906ee45a3d9939997e9001da2c8
