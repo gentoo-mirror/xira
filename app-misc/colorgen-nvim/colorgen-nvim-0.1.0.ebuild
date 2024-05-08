@@ -47,7 +47,7 @@ DESCRIPTION="Neovim colorscheme generator"
 HOMEPAGE="https://github.com/LunarVim/colorgen-nvim"
 
 SRC_URI="
-	https://github.com/LunarVim/${PN}/archive/refs/tags/${PV}.tar.gz
+	https://github.com/LunarVim/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz
 	${CARGO_CRATE_URIS}
 "
 
