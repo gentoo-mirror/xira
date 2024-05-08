@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>revelation@krxt.dev</email>
+		<name>Kirin Etheridge</name>
+	</maintainer>
+	<use>
+		<flag name="gtk2">Build and install the GTK2 theme</flag>
+		<flag name="gtk3">Build and install the GTK3 theme</flag>
+		<flag name="gtk4">Build and install the GTK4 theme</flag>
+		<flag name="transparency">Use transparent elements</flag>
+		<flag name="gnome-shell">Build GNOME Shell theme</flag>
+		<flag name="cinnamon">Build Cinnamon theme</flag>
+		<flag name="xfce">Build XFCE theme</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">jnsh/arc-theme</remote-id>
+	</upstream>
+</pkgmetadata>

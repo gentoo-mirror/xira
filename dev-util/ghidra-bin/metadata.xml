@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>revelation@krxt.dev</email>
+		<name>Kirin Etheridge</name>
+	</maintainer>
+	<use>
+		<flag name="optimal-maxmemory">Use recommended 1/4th physical memory limit for the Java heap size</flag>
+		<flag name="opengl">Enable OpenGL for proper GUI icon rendering on some systems</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">NationalSecurityAgency/ghidra</remote-id>
+	</upstream>
+</pkgmetadata>

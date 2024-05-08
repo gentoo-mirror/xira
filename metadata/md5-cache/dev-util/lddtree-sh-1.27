@@ -1,0 +1,13 @@
+BDEPEND=test? ( dev-util/kyua dev-util/shellcheck )
+DEFINED_PHASES=compile install test
+DESCRIPTION=POSIX shell fork of lddtree.sh from Gentoo's pax-utils
+EAPI=8
+HOMEPAGE=https://github.com/ncopa/lddtree
+IUSE=test
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=|| ( sys-devel/binutils app-misc/pax-utils )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/ncopa/lddtree/archive/refs/tags/v1.27.tar.gz -> lddtree-sh-1.27.tar.gz
+_md5_=6693d719ee68161698925cbe5950480b
