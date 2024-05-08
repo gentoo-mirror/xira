@@ -9,8 +9,8 @@ DESCRIPTION="A modern, advanced, portable, multiprotocol bootloader"
 HOMEPAGE="https://limine-bootloader.org"
 SRC_URI="https://github.com/limine-bootloader/limine/releases/download/v${PV}/limine-${PV}.tar.xz"
 
-KEYWORDS="~amd64"
 LICENSE="BSD-2"
+KEYWORDS="~amd64"
 SLOT="0"
 IUSE="gnu +bios +bios-pxe +bios-cd +cd-efi +uefi32 +uefi64 uefiaa64 custom-cflags clang"
 

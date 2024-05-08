@@ -1,4 +1,4 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -13,7 +13,7 @@ HOMEPAGE="http://gmic.eu/
 	https://framagit.org/dtschump/gmic"
 GMIC_QT_URI="https://github.com/c-koi/gmic-qt/archive/v.${PV}.tar.gz -> gmic-qt-${PV}.tar.gz"
 SRC_URI="https://github.com/GreycLab/gmic/archive/v.${PV}.tar.gz -> ${P}.tar.gz
-	https://gmic.eu/gmic_stdlib$(ver_rs 1- '').h
+	https://gmic.eu/gmic_stdlib_community$(ver_rs 1- '').h
 	gimp? ( ${GMIC_QT_URI} )
 	gui? ( ${GMIC_QT_URI} )
 "
@@ -41,7 +41,7 @@ COMMON_DEPEND="
 		${QT_DEPS}
 	)
 	gimp3? (
-		>=media-gfx/gimp-2.99.16
+		=media-gfx/gimp-2.99.18
 		${QT_DEPS}
 	)
 	graphicsmagick? ( media-gfx/graphicsmagick:0= )

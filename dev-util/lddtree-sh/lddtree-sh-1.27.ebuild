@@ -21,7 +21,6 @@ else
 fi
 
 IUSE="test"
-RESTRICT="!test ( test )"
 
 BDEPEND="
 	test? (

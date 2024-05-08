@@ -16,7 +16,7 @@ HOMEPAGE="
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="-test"
+KEYWORDS="~amd64"
 
 RESTRICT="mirror"
 
