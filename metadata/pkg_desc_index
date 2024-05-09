@@ -22,7 +22,6 @@ gui-apps/gradience 0.4.1 0.8.0_beta1: Change the look of Adwaita, with ease
 gui-apps/universal-android-debloater 0.5.1: Cross-platform GUI using ADB to debloat non-rooted Android devices
 gui-apps/video-trimmer 0.8.2: Trim videos quickly
 gui-apps/wl-clip-persist 0.3.1: Keep Wayland clipboard after programs close
-gui-wm/hikari 9999: Wayland compositor inspired by CWM
 media-fonts/inter 4.0-r2: The Inter font family
 media-fonts/noto-emoji 999999999: An open source emoji font from Google
 media-gfx/gmic 3.3.5-r100: GREYC's Magic Image Converter
