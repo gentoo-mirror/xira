@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, Ephemerality]
+    runs-on: self-hosted
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
