@@ -1,5 +1,8 @@
 <h1 align="center"><i>kir68k/xira</i></h1>
 <p align="center"><i>~ A Clang-optimized Portage overlay ~</i></p>
+<p align="center">
+    <img src="https://seal.stylism.moe/get/@kir68k.gh.xira?theme=asoul" />
+</p>
 
 ### Package count
 42 (2024-05-09 20:12 CEST)
