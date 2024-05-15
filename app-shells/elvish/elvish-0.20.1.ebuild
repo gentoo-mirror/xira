@@ -21,9 +21,7 @@ fi
 
 LICENSE="BSD-2"
 SLOT="0"
-RESTRICT="mirror"
-
-RESTRICT="test"
+RESTRICT="mirror test"
 
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then

@@ -13,9 +13,9 @@ HOMEPAGE="https://natrongithub.github.io"
 
 SRC_URI="https://github.com/NatronGitHub/${PROG_NAME}/releases/download/v${PV}/${PROG_NAME}-${PV}-Linux-x86_64-no-installer.tar.xz -> ${P}.tar.xz"
 S="${WORKDIR}/Natron-${PV}-Linux-x86_64-no-installer"
-KEYWORDS="amd64"
 
 LICENSE="GPL-2"
+KEYWORDS="amd64"
 SLOT="0"
 
 DEPEND="
@@ -53,8 +53,8 @@ src_install() {
 	mkdir -p "${ED}/usr/bin"						|| die
 
 	cp -r * "${ED}/opt/${PN}/"											|| die
-	cp ${S}/${MY_PN}.desktop "${ED}/usr/share/applications"				|| die
-	cp ${FILESDIR}/x-${MY_PN}.xml "${ED}/usr/share/mime/application"	|| die
+	cp "${S}/${MY_PN}.desktop" "${ED}/usr/share/applications"			|| die
+	cp "${FILESDIR}/x-${MY_PN}.xml" "${ED}/usr/share/mime/application"	|| die
 	ln -sf "/opt/${PN}/${PROG_NAME}" "${ED}/usr/bin/${PROG_NAME}"		|| die
 
 	for i in 16 22 24 32 48 64 96 128 256; do

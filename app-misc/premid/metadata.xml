@@ -6,7 +6,7 @@
 		<name>Kirin Etheridge</name>
 	</maintainer>
 	<use>
-        <flag name="build-online">Disable network-sandbox.</flag>
+		<flag name="build-online">Disable network-sandbox.</flag>
     </use>
 	<upstream>
 		<remote-id type="github">PreMiD/Linux</remote-id>

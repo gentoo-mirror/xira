@@ -6,6 +6,6 @@
 		<name>Kirin Etheridge</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">elves/elvish</remote-id>
+        <remote-id type="pypi">clickgen</remote-id>
 	</upstream>
 </pkgmetadata>

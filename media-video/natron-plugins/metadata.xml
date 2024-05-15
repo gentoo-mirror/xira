@@ -6,6 +6,6 @@
 		<name>Kirin Etheridge</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">natron-plugins</remote-id>
+        <remote-id type="github">NatronGitHub/natron-plugins</remote-id>
 	</upstream>
 </pkgmetadata>

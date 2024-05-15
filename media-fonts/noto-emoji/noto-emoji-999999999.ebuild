@@ -10,11 +10,10 @@ HOMEPAGE="https://fonts.google.com/noto/specimen/Noto+Emoji"
 
 PROPERTIES="live"
 
+S="${WORKDIR}"
 LICENSE="OFL-1.1"
 SLOT="0"
 KEYWORDS="~*"
-
-S="${WORKDIR}"
 
 FONT_SUFFIX="ttf"
 FONT_CONF=(

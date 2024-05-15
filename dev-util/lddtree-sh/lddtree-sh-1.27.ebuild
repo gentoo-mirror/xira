@@ -8,8 +8,6 @@ HOMEPAGE="https://github.com/ncopa/lddtree"
 LICENSE="GPL-2"
 SLOT="0"
 
-RESTRICT="mirror"
-
 if [[ ${PV} = 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/ncopa/lddtree.git"
@@ -20,6 +18,7 @@ else
 
 fi
 
+RESTRICT="mirror !test? ( test )"
 IUSE="test"
 
 BDEPEND="

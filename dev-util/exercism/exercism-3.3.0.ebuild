@@ -3,8 +3,6 @@
 
 EAPI=8
 
-RESTRICT="mirror"
-
 inherit go-module bash-completion-r1
 
 DESCRIPTION="A Go based command line tool for exercism.org"
@@ -24,12 +22,9 @@ else
 	KEYWORDS="~amd64"
 fi
 
+RESTRICT="mirror"
 LICENSE="MIT"
 SLOT="0"
-
-RDEPEND="
-	sys-libs/glibc
-"
 
 BDEPEND="
 	dev-lang/go

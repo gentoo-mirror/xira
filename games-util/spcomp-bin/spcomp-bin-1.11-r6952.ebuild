@@ -1,4 +1,4 @@
-# Copyright 2023 Kirixetamine <revelation@krxt.dev>
+# Copyright 2024 Kirixetamine <revelation@krxt.dev>
 # Distributed under the terms of the ISC License
 
 EAPI=8
@@ -13,16 +13,15 @@ SRC_URI="https://sm.alliedmods.net/smdrop/${PV}/sourcemod-${PV}.${SUBVER}-git${G
 LICENSE="GPL-2+ GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
+S="${WORKDIR}"
 RESTRICT="mirror"
-
-S=${WORKDIR}
 
 src_unpack() {
 	default
 }
 
 src_install() {
-	pushd ${S}
+	pushd "${S}"
 	for i in spcomp spcomp64; do
 		dobin ./addons/sourcemod/scripting/${i}
 	done
