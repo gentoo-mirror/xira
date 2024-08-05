@@ -1,6 +1,6 @@
-BDEPEND=dev-util/patchelf virtual/pkgconfig
+BDEPEND=app-arch/unzip dev-util/patchelf virtual/pkgconfig
 DEFINED_PHASES=compile install nofetch postinst postrm preinst prepare
-DEPEND=dev-libs/apr-util app-arch/libarchive dev-libs/openssl-compat dev-qt/qtcore:5 dev-qt/qtsvg:5 dev-qt/qtwebengine:5 dev-qt/qtwebsockets:5 dev-qt/qtvirtualkeyboard:5 media-libs/gstreamer media-libs/libpng sys-fs/fuse[suid] udev? ( virtual/udev ) virtual/opencl x11-misc/xdg-user-dirs virtual/glu x11-libs/gtk+:= virtual/libcrypt:= !!media-video/davinci-resolve !!media-video/davinci-resolve-studio
+DEPEND=dev-libs/apr-util app-arch/libarchive dev-libs/openssl-compat dev-qt/qtcore:5/5.15.13 dev-qt/qtsvg:5/5.15 dev-qt/qtwebengine:5/5.15 dev-qt/qtwebsockets:5/5.15 dev-qt/qtvirtualkeyboard:5/5.15 media-libs/gstreamer media-libs/libpng sys-fs/fuse:3[suid] udev? ( virtual/udev ) virtual/opencl x11-misc/xdg-user-dirs virtual/glu x11-libs/gtk+:= virtual/libcrypt:= !!media-video/davinci-resolve !!media-video/davinci-resolve-studio
 DESCRIPTION=Professional A/V post-production software suite
 EAPI=8
 HOMEPAGE=https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion
@@ -14,4 +14,4 @@ RESTRICT=strip mirror bindist fetch userpriv
 SLOT=0
 SRC_URI=DaVinci_Resolve_19.0b1_Linux.zip https://www.danieltufvesson.com/download/?file=makeresolvedeb/makeresolvedeb_1.7.0_multi.sh.tar.gz
 _eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	udev	eec0bbab06977f1cfc5597269c1fa152	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
-_md5_=7c3de136f10cd358a39515d17f1516df
+_md5_=04de1f52e56e3a87c7a09e0e25b12936
