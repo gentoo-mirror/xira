@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python3_{10..12} )
 
 inherit distutils-r1 pypi
 
-DESCRIPTION=""
+DESCRIPTION="Python library to interact with keepass databases"
 HOMEPAGE="
 	https://pypi.org/project/pykeepass/
 "

@@ -3,6 +3,8 @@
 
 EAPI=8
 
+inherit python-any-r1
+
 DESCRIPTION="Open source macOS cursors"
 HOMEPAGE="https://github.com/ful1e5/apple_cursor"
 

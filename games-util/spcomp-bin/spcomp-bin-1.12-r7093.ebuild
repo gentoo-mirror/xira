@@ -12,8 +12,8 @@ SRC_URI="https://sm.alliedmods.net/smdrop/${PV}/sourcemod-${PV}.${SUBVER}-git${G
 
 LICENSE="GPL-2+ GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 S="${WORKDIR}"
+KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror"
 
 src_unpack() {
@@ -21,7 +21,7 @@ src_unpack() {
 }
 
 src_install() {
-	pushd ${S}
+	pushd "${S}"
 	for i in spcomp spcomp64; do
 		dobin ./addons/sourcemod/scripting/${i}
 	done

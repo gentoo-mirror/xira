@@ -22,8 +22,8 @@ else
 	KEYWORDS="~amd64"
 fi
 
-RESTRICT="mirror"
 LICENSE="MIT"
+RESTRICT="mirror"
 SLOT="0"
 
 BDEPEND="

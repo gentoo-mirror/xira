@@ -7,7 +7,7 @@
 	</maintainer>
 	<use>
 		<flag name="build-online">Disable network-sandbox.</flag>
-    </use>
+	</use>
 	<upstream>
 		<remote-id type="github">PreMiD/Linux</remote-id>
 	</upstream>

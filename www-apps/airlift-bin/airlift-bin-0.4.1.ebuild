@@ -6,7 +6,7 @@ EAPI=8
 DESCRIPTION="A self-hosted file upload and sharing service"
 HOMEPAGE="https://github.com/moshee/airlift"
 
-SRC_URI="https://github.com/moshee/airlift/releases/download/v0.4.1/airliftd-v${PV}-linux_amd64.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/moshee/airlift/releases/download/v${PV}/airliftd-v${PV}-linux_amd64.tar.gz -> ${P}.tar.gz"
 S=${WORKDIR}
 
 LICENSE="BSD"
@@ -15,7 +15,7 @@ KEYWORDS="amd64"
 RESTRICT="mirror test"
 
 src_install() {
-	dobin ${WORKDIR}/airliftd
+	dobin "${WORKDIR}"/airliftd
 }
 
 pkg_postinst() {

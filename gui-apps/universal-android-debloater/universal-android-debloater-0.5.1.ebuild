@@ -355,10 +355,10 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-   gnome2_schemas_update
-   xdg_icon_cache_update
-   xdg_desktop_database_update
-   xdg_mimeinfo_database_update
+	gnome2_schemas_update
+	xdg_icon_cache_update
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 }
 
 QA_PRESTRIPPED="/usr/bin/uad_gui"

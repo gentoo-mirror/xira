@@ -18,8 +18,8 @@ else
 
 fi
 
-RESTRICT="mirror !test? ( test )"
 IUSE="test"
+RESTRICT="mirror !test? ( test )"
 
 BDEPEND="
 	test? (

@@ -212,13 +212,12 @@ CRATES="
 	zvariant_utils@1.0.1
 "
 
-RESTRICT="mirror"
+DESCRIPTION="Trim videos quickly"
+RESTRICT="test mirror"
 
 PYTHON_COMPAT=( python3_{9..12} )
 
-inherit gnome2-utils meson cargo xdg xdg-utils
-
-DESCRIPTION="Trim videos quickly"
+inherit gnome2-utils meson cargo xdg
 
 HOMEPAGE="https://gitlab.gnome.org/YaLTeR/video-trimmer"
 REPO_URI="https://gitlab.gnome.org/YaLTeR/video-trimmer"
@@ -249,8 +248,6 @@ BDEPEND="
 	virtual/rust
 	dev-util/blueprint-compiler
 "
-
-RESTRICT="test mirror"
 
 PATCHES="${FILESDIR}/cargo-frozen-flag.patch"
 
@@ -289,10 +286,10 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-   gnome2_schemas_update
-   xdg_icon_cache_update
-   xdg_desktop_database_update
-   xdg_mimeinfo_database_update
+	gnome2_schemas_update
+	xdg_icon_cache_update
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 }
 
 QA_PRESTRIPPED="/usr/bin/${PN}"

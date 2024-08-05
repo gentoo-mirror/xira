@@ -15,10 +15,9 @@ HOMEPAGE="https://rsms.me/inter/"
 
 SRC_URI="https://github.com/rsms/inter/releases/download/v${PV}/Inter-${PV}.zip -> ${P}.zip"
 S="${WORKDIR}"
-KEYWORDS="~amd64"
-
 LICENSE="OFL-1.1"
 SLOT="0"
+KEYWORDS="~amd64"
 
 BDEPEND="
 	app-arch/unzip

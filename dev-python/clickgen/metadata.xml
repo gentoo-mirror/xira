@@ -6,6 +6,7 @@
 		<name>Kirin Etheridge</name>
 	</maintainer>
 	<upstream>
-        <remote-id type="pypi">clickgen</remote-id>
+		<remote-id type="pypi">clickgen</remote-id>
+		<remote-id type="github">ful1e5/clickgen</remote-id>
 	</upstream>
 </pkgmetadata>

@@ -35,7 +35,7 @@ DESCRIPTION="Drive wipe/verification and benchmarking tool"
 HOMEPAGE="https://github.com/mqudsi/hddrand"
 SRC_URI="
 	${CARGO_CRATE_URIS}
-	https://github.com/mqudsi/hddrand/archive/${GIT_COMMIT}.tar.gz
+	https://github.com/mqudsi/hddrand/archive/${GIT_COMMIT}.tar.gz -> ${P}.tar.gz
 "
 S="${WORKDIR}/${PN}-${GIT_COMMIT}"
 

@@ -15,8 +15,8 @@ SRC_URI="https://github.com/NatronGitHub/${PROG_NAME}/releases/download/v${PV}/$
 S="${WORKDIR}/Natron-${PV}-Linux-x86_64-no-installer"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64"
 SLOT="0"
+KEYWORDS="amd64"
 
 DEPEND="
 	virtual/glu
