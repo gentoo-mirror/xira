@@ -14,11 +14,10 @@ HOMEPAGE="https://rsms.me/inter/"
 #MY_PV="${PV/20230713/9h}"
 
 SRC_URI="https://github.com/rsms/inter/releases/download/v${PV}/Inter-${PV}.zip -> ${P}.zip"
-KEYWORDS="~amd64"
 S="${WORKDIR}"
-
 LICENSE="OFL-1.1"
 SLOT="0"
+KEYWORDS="~amd64"
 
 BDEPEND="
 	app-arch/unzip

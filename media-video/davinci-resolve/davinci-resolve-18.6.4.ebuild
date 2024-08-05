@@ -30,8 +30,8 @@ SRC_URI="${ARC_NAME}
 	https://www.danieltufvesson.com/download/?file=makeresolvedeb/makeresolvedeb_${MRD_VER}_multi.sh.tar.gz"
 
 LICENSE="all-rights-reserved"
-KEYWORDS="-* ~amd64"
 SLOT="0"
+KEYWORDS="-* ~amd64"
 IUSE="doc udev +system-glib"
 
 RESTRICT="strip mirror bindist fetch userpriv"
@@ -47,21 +47,24 @@ DEPEND="
 	dev-libs/apr-util
 	app-arch/libarchive
 	dev-libs/openssl-compat
-	dev-qt/qtcore:5
-	dev-qt/qtsvg:5
-	dev-qt/qtwebengine:5
-	dev-qt/qtwebsockets:5
-	dev-qt/qtvirtualkeyboard:5
+	dev-qt/qtcore:5/5.15.3
+	dev-qt/qtsvg:5/5.15
+	dev-qt/qtwebengine:5/5.15
+	dev-qt/qtwebsockets:5/5.15
+	dev-qt/qtvirtualkeyboard:5/5.15
 	media-libs/gstreamer
 	media-libs/libpng
-	sys-fs/fuse[suid]
+	sys-fs/fuse:3[suid]
 	udev? ( virtual/udev )
 	virtual/opencl
 	x11-misc/xdg-user-dirs
 	${RDEPEND}
 "
 
-BDEPEND="dev-util/patchelf"
+BDEPEND="
+	app-arch/unzip
+	dev-util/patchelf
+"
 
 S="${WORKDIR}"
 DR="${WORKDIR}/davinci-resolve_${MAJOR_VER}-mrd${MRD_VER}_amd64"
@@ -107,10 +110,10 @@ src_compile() {
 }
 
 src_install() {
-	cp -a ${DR}/lib "${ED}" || die
-	cp -a ${DR}/opt "${ED}" || die
-	cp -a ${DR}/usr "${ED}" || die
-	mv ${ED}/usr/lib ${ED}/usr/lib64 || die
+	cp -a "${DR}"/lib "${ED}" || die
+	cp -a "${DR}"/opt "${ED}" || die
+	cp -a "${DR}"/usr "${ED}" || die
+	mv "${ED}"/usr/lib "${ED}"/usr/lib64 || die
 	#cp -a ${DR}/var "${ED}" || die
 
 	if use doc ; then

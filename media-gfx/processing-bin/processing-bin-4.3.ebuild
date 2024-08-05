@@ -32,8 +32,8 @@ src_install() {
 
 	local dest=/opt/${MY_P}
 
-	dodir "${dest}"
 	insinto "${dest}"
+	dodir "${dest}"
 	doins -r .
 
 	dodir /usr/bin

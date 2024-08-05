@@ -35,7 +35,7 @@ src_install() {
 		adw-gtk3-dark
 	)
 
-	meson install -C build --destdir ${S}/complete
+	meson install -C build --destdir "${S}"/complete
 
 	insinto /usr/share/themes
 	for theme in ${themes[@]}; do

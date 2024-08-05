@@ -21,7 +21,7 @@ fi
 src_configure() {
 	# emake install DESTDIR="${D}" does not work, for some reason.
 	sed -i -e "s@DESTDIR = \/usr@DESTDIR = ${D}@" Makefile
-	sed -i -e "s/io.github.Foldex.r2mod//g" ${S}/completions/bash/r2mod.sh
+	sed -i -e "s/io.github.Foldex.r2mod//g" "${S}"/completions/bash/r2mod.sh
 	default
 }
 
