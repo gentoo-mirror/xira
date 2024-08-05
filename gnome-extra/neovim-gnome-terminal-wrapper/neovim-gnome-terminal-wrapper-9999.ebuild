@@ -4,7 +4,7 @@
 EAPI=8
 PYTHON_COMPAT=( python3_{9..12} )
 
-inherit desktop gnome2-utils python-single-r1 xdg xdg-utils
+inherit desktop gnome2-utils python-single-r1 xdg
 
 DESCRIPTION="Wrapper for running neovim in a separate instance of gnome-terminal"
 HOMEPAGE="https://github.com/fmoralesc/neovim-gnome-terminal-wrapper"
@@ -32,6 +32,8 @@ DEPEND="
 	x11-terms/gnome-terminal
 	app-editors/neovim
 "
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${DEPEND}"
 

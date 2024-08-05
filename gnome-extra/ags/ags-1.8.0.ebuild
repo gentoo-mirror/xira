@@ -2,9 +2,8 @@
 # Distributed under the terms of the ISC License
 
 EAPI=7
-RESTRICT="mirror"
 
-inherit meson gnome2-utils xdg-utils
+inherit meson gnome2-utils
 
 DESCRIPTION="A customizable and extensible shell"
 HOMEPAGE="https://github.com/Aylur/ags"
@@ -24,7 +23,9 @@ else
 	KEYWORDS="~amd64"
 fi
 
+
 LICENSE="GPL-3"
+RESTRICT="mirror"
 SLOT="0"
 IUSE="hyprland"
 

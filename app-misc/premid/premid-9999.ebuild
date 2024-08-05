@@ -24,6 +24,7 @@ fi
 
 LICENSE="MPL-2.0"
 SLOT="0"
+IUSE="+build-online"
 RESTRICT="mirror build-online? ( network-sandbox )"
 
 DEPEND="
@@ -33,8 +34,6 @@ DEPEND="
 BDEPEND="
 	sys-apps/yarn
 "
-
-IUSE="+build-online"
 
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then

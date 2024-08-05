@@ -3,18 +3,18 @@
 
 EAPI=8
 
+DESCRIPTION="A simple GTK+ frontend for mpv"
+HOMEPAGE="https://celluloid-player.github.io/"
+
 RESTRICT="mirror"
 
 inherit gnome2-utils meson xdg
 
-DESCRIPTION="A simple GTK+ frontend for mpv"
-HOMEPAGE="https://celluloid-player.github.io/"
-
 SRC_URI="https://github.com/celluloid-player/${PN}/releases/download/v${PV}/${P}.tar.xz"
 S="${WORKDIR}/${P}"
 
-KEYWORDS="~amd64"
 LICENSE="GPL-3+"
+KEYWORDS="~amd64"
 SLOT="0"
 
 DEPEND="

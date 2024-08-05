@@ -17,9 +17,8 @@ else
 	S="${WORKDIR}/${P}"
 fi
 
-IUSE="+gtk2 +gtk3 +gtk4 +transparency gnome-shell cinnamon xfce"
-
 LICENSE="GPL-3"
+IUSE="+gtk2 +gtk3 +gtk4 +transparency gnome-shell cinnamon xfce"
 SLOT="0"
 
 DEPEND="

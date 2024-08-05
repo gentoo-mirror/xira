@@ -5,8 +5,6 @@
 
 EAPI=8
 
-RESTRICT="mirror"
-
 CRATES="
 	ab_glyph@0.2.15
 	ab_glyph_rasterizer@0.1.5
@@ -295,7 +293,7 @@ declare -A GIT_CRATES=(
 	[winit]='https://github.com/iced-rs/winit;02a12380960cec2f351c09a33d6a7cc2789d96a6;winit-%commit%'
 )
 
-inherit gnome2-utils cargo xdg xdg-utils
+inherit gnome2-utils cargo xdg
 
 DESCRIPTION="Cross-platform GUI using ADB to debloat non-rooted Android devices"
 
@@ -326,11 +324,7 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
-BDEPEND="
-	=virtual/rust-1.72.0-r1
-"
-
-RESTRICT="test"
+RESTRICT="mirror test"
 
 PATCHES="${FILESDIR}/replace-drain_filter.patch"
 
@@ -361,10 +355,10 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-   gnome2_schemas_update
-   xdg_icon_cache_update
-   xdg_desktop_database_update
-   xdg_mimeinfo_database_update
+	gnome2_schemas_update
+	xdg_icon_cache_update
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 }
 
 QA_PRESTRIPPED="/usr/bin/uad_gui"

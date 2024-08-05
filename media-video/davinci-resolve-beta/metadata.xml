@@ -4,8 +4,8 @@
 	<maintainer type="person">
 		<email>revelation@krxt.dev</email>
 		<name>Kirin Etheridge</name>
-    </maintainer>
-    <use>
-        <flag name="system-glib">Use system GLib</flag>
-    </use>
+	</maintainer>
+	<use>
+		<flag name="system-glib">Use system GLib</flag>
+	</use>
 </pkgmetadata>

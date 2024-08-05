@@ -1,4 +1,4 @@
-# Copyright 2023 Kirixetamine <revelation@krxt.dev>
+# Copyright 2024 Kirixetamine <revelation@krxt.dev>
 # Distributed under the terms of the ISC License
 
 EAPI=8
@@ -10,8 +10,8 @@ HOMEPAGE="https://limine-bootloader.org"
 SRC_URI="https://github.com/limine-bootloader/limine/releases/download/v${PV}/limine-${PV}.tar.xz"
 
 LICENSE="BSD-2"
-KEYWORDS="~amd64"
 SLOT="0"
+KEYWORDS="~amd64"
 IUSE="gnu +bios +bios-pxe +bios-cd +cd-efi +uefi32 +uefi64 uefiaa64 custom-cflags clang"
 
 MY_LLVM_TARGETS="AArch64 ARM X86"

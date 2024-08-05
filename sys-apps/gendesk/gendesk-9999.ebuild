@@ -1,11 +1,11 @@
-# Copyright 2023 Kirixetamine <revelation@krxt.dev>
+# Copyright 2024 Kirixetamine <revelation@krxt.dev>
 # Distributed under the terms of the ISC License
 
 EAPI=8
 
 inherit go-module
 
-DESCRIPTION="Generate .desktop files and download .png icons by specifying a minimum of information"
+DESCRIPTION="Generate .desktop files from the terminal"
 HOMEPAGE="
 	https://github.com/xyproto/gendesk
 	https://gendesk.roboticoverlords.org
