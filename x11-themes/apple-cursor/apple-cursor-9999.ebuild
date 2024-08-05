@@ -3,6 +3,8 @@
 
 EAPI=8
 
+PYTHON_COMPAT=( python3_{9..12} )
+
 inherit python-any-r1
 
 DESCRIPTION="Open source macOS cursors"
