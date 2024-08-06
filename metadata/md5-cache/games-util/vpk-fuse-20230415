@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/ElementW/vpk_fuse/archive/4e7e4b78d73f9e09287079d3e62f53cbc5d04a37.tar.gz -> vpk-fuse-20230415.tar.gz
-_eclasses_=toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	linux-info	ea4122ba1d8791a12b78e53f9510a2e3
+_eclasses_=toolchain-funcs	e7e7331166166e7a516d19e264b098c2	multilib	c19072c3cd7ac5cb21de013f7e9832e0	linux-info	ea4122ba1d8791a12b78e53f9510a2e3
 _md5_=ac44575c34c8f6dbe869087e3d440c57
