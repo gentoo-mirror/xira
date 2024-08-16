@@ -13,5 +13,5 @@ RDEPEND=virtual/glu x11-libs/gtk+:= virtual/libcrypt:= !!media-video/davinci-res
 RESTRICT=strip mirror bindist fetch userpriv
 SLOT=0
 SRC_URI=DaVinci_Resolve_19.0b1_Linux.zip https://www.danieltufvesson.com/download/?file=makeresolvedeb/makeresolvedeb_1.7.0_multi.sh.tar.gz
-_eclasses_=toolchain-funcs	0c713337f7872f1a002cecaaea9bef73	multilib	c19072c3cd7ac5cb21de013f7e9832e0	udev	eec0bbab06977f1cfc5597269c1fa152	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
+_eclasses_=toolchain-funcs	5f8f1dc0c94e007fa08af4e98a19d0e5	multilib	c19072c3cd7ac5cb21de013f7e9832e0	udev	eec0bbab06977f1cfc5597269c1fa152	xdg-utils	baea6080dd821f5562d715887954c9d3	xdg	4a14c5c24f121e7da66e5aab4a168c6e
 _md5_=04de1f52e56e3a87c7a09e0e25b12936
