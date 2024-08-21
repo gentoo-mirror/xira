@@ -1,4 +1,4 @@
-# Copyright 2023 Kirixetamine <revelation@krxt.dev>
+# Copyright 2024 Kirixetamine <revelation@krxt.dev>
 # Distributed under the terms of the ISC License
 
 EAPI=8
@@ -9,13 +9,8 @@ inherit gnome2-utils meson python-single-r1 xdg-utils
 DESCRIPTION="A password manager made for the GNOME desktop"
 HOMEPAGE="https://gitlab.gnome.org/World/secrets/"
 
-if [[ ${PV} == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://gitlab.gnome.org/World/secrets"
-else
-	SRC_URI="https://gitlab.gnome.org/World/secrets/-/archive/${PV}/secrets-${PV}.tar.gz"
-	S="${WORKDIR}/${P}"
-fi
+SRC_URI="https://gitlab.gnome.org/World/secrets/-/archive/${PV}/secrets-${PV}.tar.gz"
+S="${WORKDIR}/${P}"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -25,11 +20,14 @@ RDEPEND="
 	>=dev-libs/glib-2.73.1
 	>=dev-libs/gobject-introspection-1.66.0
 	>=gui-libs/gtk-4.9
-	>=gui-libs/libadwaita-1.4_beta
-	>=dev-python/pykeepass-4.0.6
-	dev-python/pyotp
+	>=gui-libs/libadwaita-1.5.1
+	>=dev-python/pykeepass-4.0.7
+	>=dev-python/pyotp-2.4.0
+	dev-python/PyKCS11
+	dev-python/python-yubico
 	dev-python/validators
 	dev-python/zxcvbn
+
 "
 BDEPEND="${RDEPEND}" # Redundant?
 
@@ -48,7 +46,7 @@ src_install() {
 	meson_src_install
 	python_optimize
 
-	sed -i '1s/.*/#!\/usr\/bin\/env python3/' "${D}/usr/bin/secrets"
+	python_fix_shebang "${D}/usr/bin/secrets"
 }
 
 src_test() {

@@ -24,14 +24,6 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="man"
 
-RDEPEND="
-	sys-libs/glibc
-"
-
-BDEPEND="
-	dev-lang/go
-"
-
 RESTRICT="mirror"
 
 src_unpack() {
