@@ -1,4 +1,4 @@
-BDEPEND=dev-lang/go >=dev-lang/go-1.20:= app-arch/unzip
+BDEPEND=>=dev-lang/go-1.20:= app-arch/unzip
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=A Go based command line tool for exercism.org
 EAPI=8
@@ -10,4 +10,4 @@ RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/exercism/cli/archive/v3.3.0.tar.gz -> exercism-3.3.0.tar.gz https://dist.krxt.dev/dev-util/exercism/exercism-3.3.0-vendor.tar.xz
 _eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	go-env	90efbc8636d2f02d9654183330e84cf7	go-module	83fd3ed1657cfc316c93d6a37018290d	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff
-_md5_=70d9adb1991af8a6e8f4903aab627c1d
+_md5_=9ce3456bfba58209ffdc4942e7a470f9

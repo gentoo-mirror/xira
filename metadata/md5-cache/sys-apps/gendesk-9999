@@ -1,4 +1,4 @@
-BDEPEND=dev-lang/go >=dev-lang/go-1.20:= app-arch/unzip >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=>=dev-lang/go-1.20:= app-arch/unzip >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile install unpack
 DESCRIPTION=Generate .desktop files from the terminal
 EAPI=8
@@ -7,8 +7,7 @@ INHERIT=go-module git-r3
 IUSE=man
 LICENSE=BSD
 PROPERTIES=live
-RDEPEND=sys-libs/glibc
 RESTRICT=mirror strip
 SLOT=0
 _eclasses_=multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	go-env	90efbc8636d2f02d9654183330e84cf7	go-module	83fd3ed1657cfc316c93d6a37018290d	git-r3	875eb471682d3e1f18da124be97dcc81
-_md5_=f09ee0454165a1b05c2967cc69717b26
+_md5_=caabe84b5df0bcfdec669026dd5539b5
