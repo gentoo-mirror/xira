@@ -1,0 +1,12 @@
+diff --git a/setup.py b/setup.py
+index e120c08..d411769 100644
+--- a/setup.py
++++ b/setup.py
+@@ -27,7 +27,6 @@ setup(
+     license='BSD 2 clause',
+     packages=['yubico'],
+     install_requires=['pyusb'],
+-    test_suite='test',
+     cmdclass={'release': release},
+     classifiers=[
+         'License :: OSI Approved :: BSD License',

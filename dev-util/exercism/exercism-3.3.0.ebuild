@@ -26,10 +26,6 @@ LICENSE="MIT"
 RESTRICT="mirror"
 SLOT="0"
 
-BDEPEND="
-	dev-lang/go
-"
-
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then
 		git-r3_src_unpack		|| die
