@@ -14,7 +14,7 @@ CRATES="
 	anstyle-query@1.0.0
 	anstyle-wincon@3.0.1
 	anstyle@1.0.3
-	anyhow@1.0.82
+	anyhow@1.0.86
 	autocfg@1.1.0
 	beef@0.5.2
 	bitflags@1.3.2
@@ -24,13 +24,13 @@ CRATES="
 	cast@0.3.0
 	castaway@0.2.2
 	cfg-if@1.0.0
-	chrono@0.4.31
+	chrono@0.4.38
 	ciborium-io@0.2.1
 	ciborium-ll@0.2.1
 	ciborium@0.2.1
-	clap@4.5.4
-	clap_builder@4.5.2
-	clap_derive@4.5.4
+	clap@4.5.8
+	clap_builder@4.5.8
+	clap_derive@4.5.8
 	clap_lex@0.7.0
 	colorchoice@1.0.0
 	compact_str@0.7.1
@@ -38,7 +38,7 @@ CRATES="
 	crc32fast@1.3.2
 	criterion-plot@0.5.0
 	criterion@0.5.1
-	crossbeam-channel@0.5.12
+	crossbeam-channel@0.5.13
 	crossbeam-deque@0.8.3
 	crossbeam-epoch@0.9.15
 	crossbeam-utils@0.8.19
@@ -54,7 +54,7 @@ CRATES="
 	fern@0.6.2
 	file-id@0.2.1
 	filetime@0.2.22
-	flate2@1.0.29
+	flate2@1.0.30
 	fnv@1.0.7
 	form_urlencoded@1.2.1
 	fsevent-sys@4.1.0
@@ -71,16 +71,16 @@ CRATES="
 	is-terminal@0.4.9
 	isocountry@0.3.2
 	itertools@0.10.5
-	itertools@0.12.1
+	itertools@0.13.0
 	itoa@1.0.9
 	js-sys@0.3.64
 	kqueue-sys@1.0.4
 	kqueue@1.0.8
 	lazy_static@1.4.0
-	libc@0.2.153
+	libc@0.2.155
 	linux-raw-sys@0.4.13
 	lock_api@0.4.10
-	log@0.4.21
+	log@0.4.22
 	logos-codegen@0.14.0
 	logos-derive@0.14.0
 	logos@0.14.0
@@ -100,7 +100,7 @@ CRATES="
 	once_cell@1.19.0
 	oorandom@11.1.3
 	option-ext@0.2.0
-	parking_lot@0.12.1
+	parking_lot@0.12.3
 	parking_lot_core@0.9.8
 	pathdiff@0.2.1
 	percent-encoding@2.3.1
@@ -122,19 +122,20 @@ CRATES="
 	redox_users@0.4.3
 	regex-automata@0.4.6
 	regex-syntax@0.8.2
-	regex@1.10.4
+	regex@1.10.5
 	rowan@0.15.15
 	rustc-hash@1.1.0
+	rustc-hash@2.0.0
 	rustix@0.38.31
 	rustversion@1.0.15
 	ryu@1.0.15
 	same-file@1.0.6
 	scopeguard@1.2.0
-	serde@1.0.199
-	serde_derive@1.0.199
-	serde_json@1.0.116
+	serde@1.0.203
+	serde_derive@1.0.203
+	serde_json@1.0.119
 	serde_regex@1.1.0
-	serde_repr@0.1.18
+	serde_repr@0.1.19
 	shellexpand@3.1.0
 	siphasher@0.3.11
 	smallvec@1.11.1
@@ -143,8 +144,8 @@ CRATES="
 	syn@2.0.48
 	tempfile@3.10.1
 	text-size@1.1.1
-	thiserror-impl@1.0.59
-	thiserror@1.0.59
+	thiserror-impl@1.0.61
+	thiserror@1.0.61
 	thread_local@1.1.7
 	threadpool@1.8.1
 	tinytemplate@1.2.1
@@ -160,7 +161,7 @@ CRATES="
 	unidecode@0.3.0
 	url@2.5.0
 	utf8parse@0.2.1
-	versions@6.2.0
+	versions@6.3.0
 	walkdir@2.4.0
 	wasi@0.11.0+wasi-snapshot-preview1
 	wasm-bindgen-backend@0.2.87
