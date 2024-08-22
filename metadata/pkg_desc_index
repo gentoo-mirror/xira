@@ -10,7 +10,7 @@ dev-python/python-yubico 1.3.3: Python code for talking to Yubico's YubiKeys
 dev-python/toml 0.10.2: Python Library for Tom's Obvious, Minimal Language
 dev-python/vpk 1.4.0: Open, Search, Extract and Create VPKs in python
 dev-python/zxcvbn 4.4.28: A realistic password strength estimator
-dev-tex/texlab 5.16.0: LaTeX Language Server (LSP)
+dev-tex/texlab 5.19.0: LaTeX Language Server (LSP)
 dev-util/exercism 3.3.0: A Go based command line tool for exercism.org
 dev-util/ghidra-bin 11.0.3-r1: Ghidra is a software reverse engineering (SRE) framework
 dev-util/lddtree-sh 1.27: POSIX shell fork of lddtree.sh from Gentoo's pax-utils
