@@ -5,7 +5,7 @@
 </p>
 
 ### Package count
-42 (2024-05-09 20:12 CEST)
+45 (2024-08-22 08:18 CEST)
 
 Counted by:
 ```
@@ -15,8 +15,6 @@ ls -Fd */* | grep '/$' | grep -Ev '^(profiles|metadata)' | wc -l
 
 # Overview
 This is a personal portage overlay, which was initially created with a goal in mind of adding patches to C/C++ programs which can't compile on Clang either with default CFLAGS, or with my more extreme ones (per `features/stylize`).
-
-Due to certain... reasons... IRL, after August of 2023 I haven't had any motivation to do anything, including modifying anything here. My motivation has been coming back as of writing, but I've shifted the goal. I don't think I could maintain what I had in mind by myself, and most things seem to build with my settings, or without using LTO.
 
 Now this repo is *primarily* for packages related to gnome, such as video-trimmer or secrets, and Source Engine/SRCDS related tools. The rest is programs I haven't seen packaged in any other repo, that I use.
 
@@ -49,7 +47,7 @@ Ebuilds I have copied from e.g. the main repository preserve their original GPLv
 
 > [!NOTE]
 > Everything in this repository should compile using either LLVM/Clang or GCC.\
-> I only test using portage settings from `features/stylize`, i.e. ThinLTO, x86-64-v3, LLVM toolchain.\
+> I only test using portage settings from `features/stylize`, i.e. ThinLTO, x86-64-v3, LLVM toolchain.
 
 > [!WARNING]
 > The LLVM profiles from here use the main Gentoo ones as `parent`, but contain extra changes, through `features/stylize`.
