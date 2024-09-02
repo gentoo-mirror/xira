@@ -37,7 +37,7 @@ Ebuilds I have copied from e.g. the main repository preserve their original GPLv
 
 ### Requirements
 - GURU Overlay
-    - Some ebuilds might have dependencies that exist only in the GURU overlay. [//]: # "TODO: Explain which ebuilds require this, please."
+    - Some ebuilds might have dependencies that exist only in the GURU overlay. [//]: # (TODO: Explain which ebuilds require this, please.)
 #### Recommendations
 - LLVM profile
     - Best is to install using the LLVM stage3.
@@ -58,6 +58,12 @@ Ebuilds I have copied from e.g. the main repository preserve their original GPLv
 
 ### What's in here?
 A directory structure and explanations are listed below.
+
+> [!WARNING]
+> llvm-complete & openwrt-prequisites may or may not be removed soon.\
+> They don't serve that much of a purpose, see TODO.md\
+> *2024-09-02*
+
 ```sh
 xira
 ├── [ebuild categories]
