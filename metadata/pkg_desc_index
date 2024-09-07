@@ -4,7 +4,7 @@ app-misc/premid 9999: PreMiD adds Discord Rich Presence support to a lot of serv
 app-shells/elvish 0.20.1: An expressive programming language and interactive shell
 app-text/sioyek 2.0.0: Sioyek is a PDF viewer with a focus on textbooks and research papers
 dev-python/PyKCS11 1.5.16: Full PKCS#11 wrapper for Python
-dev-python/clickgen 2.1.3: The hassle-free cursor building toolbox
+dev-python/clickgen 2.2.5: The hassle-free cursor building toolbox
 dev-python/pykeepass 4.1.0: Python library to interact with keepass databases
 dev-python/python-yubico 1.3.3: Python code for talking to Yubico's YubiKeys
 dev-python/toml 0.10.2: Python Library for Tom's Obvious, Minimal Language
@@ -38,6 +38,6 @@ sys-apps/gendesk 1.0.9 9999: Generate .desktop files from the terminal
 sys-block/hddrand 20230116: Drive wipe/verification and benchmarking tool
 sys-boot/limine 5.20230819.0: A modern, advanced, portable, multiprotocol bootloader
 www-apps/airlift-bin 0.4.1: A self-hosted file upload and sharing service
-x11-themes/adw-gtk3 9999: The theme from libadwaita ported to GTK-3
+x11-themes/adw-gtk3 5.3 9999: The theme from libadwaita ported to GTK-3
 x11-themes/apple-cursor 9999: Open source macOS cursors
 x11-themes/arc-theme 9999: A flat theme with transparent elements
