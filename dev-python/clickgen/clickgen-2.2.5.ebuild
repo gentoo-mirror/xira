@@ -20,8 +20,10 @@ SLOT="0"
 RESTRICT="mirror"
 
 RDEPEND="
+	>=dev-python/attrs-15.0.0
+	>=dev-python/pyyaml-6.0.1
 	>=dev-python/pillow-8.1.1
-	dev-python/toml
+	>=dev-python/toml-0.10.2
 	>=dev-python/numpy-1.21.6
 "
 
