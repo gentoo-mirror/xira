@@ -11,5 +11,5 @@ RDEPEND=opengl? ( virtual/opengl )
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.0.3_build/ghidra_11.0.3_PUBLIC_20240410.zip -> ghidra-bin-11.0.3.zip
-_eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3	desktop	021728fdc1b03b36357dbc89489e0f0d	portability	225656ad6c6594fe3b0187bdd50707fb	savedconfig	b9131abe556ad2ea96c01b06d658d363
+_eclasses_=xdg-utils	5465aed08f1dfc2a75f14cbea4272961	desktop	56973babb9c5f19cab0eeb53ece644c6	portability	01f478fa22185b3606f2d4adea4675ed	savedconfig	b9131abe556ad2ea96c01b06d658d363
 _md5_=02921e37bc457aa0d2df48870b8e05be

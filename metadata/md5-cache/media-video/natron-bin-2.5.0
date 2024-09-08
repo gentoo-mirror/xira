@@ -11,5 +11,5 @@ RDEPEND=virtual/glu sys-libs/libxcrypt x11-themes/hicolor-icon-theme
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/NatronGitHub/Natron/releases/download/v2.5.0/Natron-2.5.0-Linux-x86_64-no-installer.tar.xz -> natron-bin-2.5.0.tar.xz
-_eclasses_=xdg-utils	baea6080dd821f5562d715887954c9d3
+_eclasses_=xdg-utils	5465aed08f1dfc2a75f14cbea4272961
 _md5_=f186980f0bc15d18c9653ae4035fffd0
