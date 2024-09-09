@@ -1,2 +1,0 @@
-# darcs Eclass does not work yet
-gui-wm/hikari
