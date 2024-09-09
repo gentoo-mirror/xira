@@ -39,5 +39,5 @@ sys-block/hddrand 20230116: Drive wipe/verification and benchmarking tool
 sys-boot/limine 5.20230819.0: A modern, advanced, portable, multiprotocol bootloader
 www-apps/airlift-bin 0.4.1: A self-hosted file upload and sharing service
 x11-themes/adw-gtk3 5.3 9999: The theme from libadwaita ported to GTK-3
-x11-themes/apple-cursor 9999: Open source macOS cursors
+x11-themes/apple-cursor 2.0.1: Open source macOS cursors
 x11-themes/arc-theme 9999: A flat theme with transparent elements
