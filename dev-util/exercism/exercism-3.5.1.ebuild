@@ -1,4 +1,4 @@
-# Copyright 2023 Kirixetamine <revelation@krxt.dev>
+# Copyright 2024 Kirixetamine <revelation@krxt.dev>
 # Distributed under the terms of the ISC License
 
 EAPI=8
@@ -15,6 +15,8 @@ if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/exercism/cli/"
 else
+	# Cargo clears... >.>
+	# https://devmanual.gentoo.org/eclass-reference/go-module.eclass/index.html
 	SRC_URI="
 		https://github.com/${PN}/cli/archive/v${PV}.tar.gz -> ${P}.tar.gz
 		https://dist.krxt.dev/dev-util/${PN}/${P}-vendor.tar.xz"
