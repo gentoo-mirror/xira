@@ -25,8 +25,8 @@ else
 fi
 
 LICENSE="MIT"
-RESTRICT="mirror"
 SLOT="0"
+RESTRICT="mirror"
 
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then
