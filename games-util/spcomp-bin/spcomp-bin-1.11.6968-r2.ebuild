@@ -6,17 +6,17 @@ EAPI=8
 DESCRIPTION="SourcePawn compiler developed by the SourceMod team"
 HOMEPAGE="https://sourcemod.net/"
 
-MAJ_VER="1.12"
+MAJ_VER="1.11"
 MIN_VER="0"
-GITREV="7158"
+GITREV="6968"
 SRC_URI="
 	https://sm.alliedmods.net/smdrop/${MAJ_VER}/sourcemod-${MAJ_VER}.${MIN_VER}-git${GITREV}-linux.tar.gz -> ${P}.tar.gz
 	"
+S="${WORKDIR}"
+KEYWORDS="amd64 x86"
 
 LICENSE="GPL-2+ GPL-3"
-S="${WORKDIR}"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror"
 
 src_unpack() {
