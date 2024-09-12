@@ -10,9 +10,11 @@ DESCRIPTION="Wrapper for running neovim in a separate instance of gnome-terminal
 HOMEPAGE="https://github.com/fmoralesc/neovim-gnome-terminal-wrapper"
 
 REPO_URI="https://github.com/fmoralesc/neovim-gnome-terminal-wrapper"
+GIT_COMMIT="dbdc5bef872c9d064e71012f9b663e0b13fd433d"
+MY_P="${PN}-${GIT_COMMIT}"
 
-SRC_URI="${REPO_URI}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
-S="${WORKDIR}/${P}"
+SRC_URI="${REPO_URI}/archive/${GIT_COMMIT}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/${MY_P}"
 
 
 LICENSE="GPL-3"
@@ -35,7 +37,7 @@ BDEPEND="
 	${PYTHON_DEPS}
 "
 
-RESTRICT="test"
+RESTRICT="test mirror"
 
 src_prepare() {
 	default
