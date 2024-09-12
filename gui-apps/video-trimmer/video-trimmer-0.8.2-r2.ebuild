@@ -212,13 +212,12 @@ CRATES="
 	zvariant_utils@1.0.1
 "
 
-DESCRIPTION="Trim videos quickly"
-RESTRICT="test mirror"
-
-PYTHON_COMPAT=( python3_{9..12} )
+# FIXME: Why is this here...?
+PYTHON_COMPAT=( python3_{9..13} )
 
 inherit gnome2-utils meson cargo xdg
 
+DESCRIPTION="Trim videos quickly"
 HOMEPAGE="https://gitlab.gnome.org/YaLTeR/video-trimmer"
 REPO_URI="https://gitlab.gnome.org/YaLTeR/video-trimmer"
 
@@ -250,6 +249,8 @@ BDEPEND="
 "
 
 PATCHES="${FILESDIR}/cargo-frozen-flag.patch"
+
+RESTRICT="test mirror"
 
 src_prepare() {
 	default
