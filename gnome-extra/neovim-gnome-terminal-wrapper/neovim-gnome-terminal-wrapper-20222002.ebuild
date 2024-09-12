@@ -1,8 +1,8 @@
-# Copyright 2023 Kirixetamine <revelation@krxt.dev>
+# Copyright 2024 Kirixetamine <revelation@krxt.dev>
 # Distributed under the terms of the ISC License
 
 EAPI=8
-PYTHON_COMPAT=( python3_{9..12} )
+PYTHON_COMPAT=( python3_{9..13} )
 
 inherit desktop gnome2-utils python-single-r1 xdg
 
@@ -11,22 +11,13 @@ HOMEPAGE="https://github.com/fmoralesc/neovim-gnome-terminal-wrapper"
 
 REPO_URI="https://github.com/fmoralesc/neovim-gnome-terminal-wrapper"
 
-if [[ ${PV} == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="${REPO_URI}"
-else
-	SRC_URI="${REPO_URI}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
-	S="${WORKDIR}/${P}"
-fi
+SRC_URI="${REPO_URI}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/${P}"
+
 
 LICENSE="GPL-3"
 SLOT="0"
 
-# Nettle compiled with SHA x86 flag causes SIGILL
-# when opening "Manage presets"
-# Only thing I could find about this is an issue for
-# another program suffering from the same issue.
-# https://gitlab.com/gnutls/gnutls/-/issues/1496
 DEPEND="
 	dev-python/dbus-python
 	x11-terms/gnome-terminal
@@ -35,7 +26,10 @@ DEPEND="
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+	${PYTHON_DEPS}
+"
 
 BDEPEND="
 	${PYTHON_DEPS}
@@ -69,8 +63,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-   gnome2_schemas_update
-   xdg_icon_cache_update
-   xdg_desktop_database_update
-   xdg_mimeinfo_database_update
+	gnome2_schemas_update
+	xdg_icon_cache_update
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 }
