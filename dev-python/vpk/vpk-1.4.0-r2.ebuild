@@ -1,10 +1,10 @@
-# Copyright 2023 Kirixetamine <revelation@krxt.dev>
+# Copyright 2024 Kirixetamine <revelation@krxt.dev>
 # Distributed under the terms of the ISC License
 
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( pypy3 python3_{7..12} )
+PYTHON_COMPAT=( pypy3 python3_{7..13} )
 
 inherit distutils-r1 pypi
 
