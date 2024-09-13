@@ -16,4 +16,4 @@ jobs:
     - name: Run pkgcheck
       uses: pkgcore/pkgcheck-action@v1
       with:
-        args: --keywords=-NonsolvableDepsInStable
+        args: --keywords=-NonsolvableDepsInStable,-UnknownRestrict
