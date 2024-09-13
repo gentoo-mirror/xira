@@ -11,13 +11,17 @@ HOMEPAGE="
 	https://gendesk.roboticoverlords.org
 "
 
-SRC_URI="https://github.com/xyproto/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/xyproto/gendesk/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/${P}"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="man"
+
+RDEPEND="
+	sys-libs/glibc
+"
 
 RESTRICT="mirror"
 
