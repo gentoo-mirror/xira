@@ -5,8 +5,6 @@
 
 EAPI=8
 
-RESTRICT="mirror"
-
 CRATES="
 	cfg-if@1.0.0
 	getrandom@0.2.7
@@ -44,5 +42,7 @@ LICENSE="MIT"
 LICENSE+=" MIT"
 SLOT="0"
 KEYWORDS="~amd64"
+
+RESTRICT="mirror"
 
 QA_PRESTRIPPED="/usr/bin/${PN}"
