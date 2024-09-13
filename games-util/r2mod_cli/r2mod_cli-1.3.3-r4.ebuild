@@ -9,8 +9,8 @@ SRC_URI="https://github.com/Foldex/${PN}/archive/refs/tags/v${PV}.tar.gz -> ${P}
 S="${WORKDIR}/${P}"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64"
 SLOT="0"
+KEYWORDS="~amd64"
 
 RESTRICT="mirror"
 
