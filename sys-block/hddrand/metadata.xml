@@ -5,7 +5,7 @@
 		<email>revelation@krxt.dev</email>
 		<name>Kirin Etheridge</name>
 	</maintainer>
-    <upstream>
+	<upstream>
 		<remote-id type="github">mqudsi/hddrand</remote-id>
 	</upstream>
 </pkgmetadata>
