@@ -2,18 +2,20 @@
 # Distributed under the terms of the ISC License
 
 EAPI=8
-PYTHON_COMPAT=( python3_{9..12} )
+PYTHON_COMPAT=( python3_{9..13} )
 
-inherit gnome2-utils meson python-single-r1 xdg-utils
+inherit gnome2-utils meson python-single-r1 xdg virtualx
 
 DESCRIPTION="A password manager made for the GNOME desktop"
 HOMEPAGE="https://gitlab.gnome.org/World/secrets/"
 
-SRC_URI="https://gitlab.gnome.org/World/secrets/-/archive/${PV}/secrets-${PV}.tar.gz"
+SRC_URI="https://gitlab.gnome.org/World/secrets/-/archive/${PV}/secrets-${PV}.tar.bz2"
 S="${WORKDIR}/${P}"
 
 LICENSE="GPL-3"
 SLOT="0"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
 	${PYTHON_DEPS}
@@ -63,8 +65,8 @@ pkg_postinst() {
 
 # Clean unnecessary things
 pkg_postrm() {
-   gnome2_schemas_update
-   xdg_icon_cache_update
-   xdg_desktop_database_update
-   xdg_mimeinfo_database_update
+	gnome2_schemas_update
+	xdg_icon_cache_update
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 }

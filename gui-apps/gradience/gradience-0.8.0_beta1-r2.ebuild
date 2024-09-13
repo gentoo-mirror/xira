@@ -1,10 +1,10 @@
-# Copyright 2023 Kirixetamine <revelation@krxt.dev>
+# Copyright 2024 Kirixetamine <revelation@krxt.dev>
 # Distributed under the terms of the ISC License
 
 EAPI=8
-PYTHON_COMPAT=( python3_{9..12} )
+PYTHON_COMPAT=( python3_{9..13} )
 
-inherit gnome2-utils meson python-single-r1 xdg xdg-utils
+inherit gnome2-utils meson python-single-r1 xdg
 
 DESCRIPTION="Change the look of Adwaita, with ease"
 HOMEPAGE="https://github.com/GradienceTeam/Gradience"
@@ -13,21 +13,21 @@ REPO_URI="https://github.com/GradienceTeam/Gradience"
 
 MY_PV="${PV/\_/\-}"
 
-if [[ ${PV} == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="${REPO_URI}"
-else
-	SRC_URI="${REPO_URI}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
-	S="${WORKDIR}/Gradience-${MY_PV}"
-	if [[ ${PV} == "0.8.0_beta1" ]]; then
-		PATCHES=(
-			"${FILESDIR}/exclude-submodules-meson.patch"
-		)
-	fi
+# gtk3 apply patch taken from here
+# https://github.com/GradienceTeam/Gradience/pull/813
+SRC_URI="${REPO_URI}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/Gradience-${MY_PV}"
+if [[ ${PV} == "0.8.0_beta1" ]]; then
+	PATCHES=(
+		"${FILESDIR}/exclude-submodules-meson.patch"
+		"${FILESDIR}/fix-gtk3-apply-crashing.patch"
+	)
 fi
 
 LICENSE="GPL-3"
 SLOT="0"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 # Nettle compiled with SHA x86 flag causes SIGILL
 # when opening "Manage presets"
@@ -49,7 +49,10 @@ DEPEND="
 	dev-python/libsass
 "
 
-RDEPEND="${DEPEND}"
+RDEPEND="
+	${DEPEND}
+	${PYTHON_DEPS}
+"
 
 BDEPEND="
 	${PYTHON_DEPS}
@@ -70,11 +73,11 @@ src_prepare() {
 src_install() {
 	meson_src_install
 	python_optimize
-    mv "${ED}"/usr/share/appdata "${ED}"/usr/share/metainfo || die
+	mv "${ED}"/usr/share/appdata "${ED}"/usr/share/metainfo || die
 }
 
 src_test() {
-	virtx meson_src_test
+	meson_src_test
 }
 
 pkg_postinst() {
@@ -85,8 +88,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-   gnome2_schemas_update
-   xdg_icon_cache_update
-   xdg_desktop_database_update
-   xdg_mimeinfo_database_update
+	gnome2_schemas_update
+	xdg_icon_cache_update
+	xdg_desktop_database_update
+	xdg_mimeinfo_database_update
 }

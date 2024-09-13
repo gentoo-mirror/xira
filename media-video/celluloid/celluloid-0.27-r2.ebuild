@@ -1,4 +1,4 @@
-# Copyright 2023 Kirixetamine <revelation@krxt.dev>
+# Copyright 2024 Kirixetamine <revelation@krxt.dev>
 # Distributed under the terms of the ISC License
 
 EAPI=8
@@ -6,21 +6,19 @@ EAPI=8
 DESCRIPTION="A simple GTK+ frontend for mpv"
 HOMEPAGE="https://celluloid-player.github.io/"
 
-RESTRICT="mirror"
-
 inherit gnome2-utils meson xdg
 
 SRC_URI="https://github.com/celluloid-player/${PN}/releases/download/v${PV}/${P}.tar.xz"
 S="${WORKDIR}/${P}"
 
 LICENSE="GPL-3+"
-KEYWORDS="~amd64"
 SLOT="0"
+KEYWORDS="~amd64"
 
 DEPEND="
 	>=dev-libs/glib-2.66
-	>=gui-libs/gtk-4.6.2
-	>=gui-libs/libadwaita-1.2.0
+	>=gui-libs/gtk-4.10
+	>=gui-libs/libadwaita-1.4.0
 	media-libs/libepoxy
 	>=media-video/mpv-0.32:=[libmpv]
 "
@@ -30,17 +28,7 @@ BDEPEND="
 	virtual/pkgconfig
 "
 
-src_configure() {
-	meson_src_configure
-}
-
-src_compile() {
-	meson_src_compile
-}
-
-src_install() {
-	meson_src_install
-}
+RESTRICT="mirror"
 
 pkg_postinst() {
 	xdg_pkg_postinst
