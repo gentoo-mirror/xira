@@ -1,0 +1,13 @@
+BDEPEND=dev-build/make virtual/pkgconfig sys-fs/fuse:0=
+DEFINED_PHASES=compile install setup
+DESCRIPTION=FUSE filesystem to read Valve VPK files
+EAPI=8
+HOMEPAGE=https://github.com/ElementW/vpk_fuse
+INHERIT=linux-info
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RESTRICT=mirror
+SLOT=0
+SRC_URI=https://github.com/ElementW/vpk_fuse/archive/4e7e4b78d73f9e09287079d3e62f53cbc5d04a37.tar.gz -> vpk-fuse-20230415.tar.gz
+_eclasses_=toolchain-funcs	948855ec7ad9f11351edf9066708dfa9	multilib	7e1347c006a76bb812f3a9f663b79991	linux-info	ea4122ba1d8791a12b78e53f9510a2e3
+_md5_=ac44575c34c8f6dbe869087e3d440c57
