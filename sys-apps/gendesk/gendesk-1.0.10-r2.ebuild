@@ -19,10 +19,6 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="man"
 
-RDEPEND="
-	sys-libs/glibc
-"
-
 RESTRICT="mirror"
 
 src_compile() {
