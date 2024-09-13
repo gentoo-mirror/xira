@@ -5,12 +5,9 @@
 app-misc/premid:build-online - Disable network-sandbox.
 dev-util/ghidra-bin:opengl - Enable OpenGL for proper GUI icon rendering on some systems
 dev-util/ghidra-bin:optimal-maxmemory - Use recommended 1/4th physical memory limit for the Java heap size
-gnome-extra/ags:hyprland - Pull in hyprland as a dependency
 media-gfx/gmic:cli - Enable G'Mic CLI
 media-gfx/gmic:gimp3 - Enable GIMP 3 support (Only for X11)
 media-gfx/gmic:opencv - Enable OpenCV support
-media-video/davinci-resolve:system-glib - Use system GLib
-media-video/davinci-resolve-beta:system-glib - Use system GLib
 sys-boot/limine:bios - Build the x86 BIOS port
 sys-boot/limine:bios-cd - Build the x86 BIOS CD image
 sys-boot/limine:bios-pxe - Build the x86 BIOS PXE image
@@ -20,10 +17,3 @@ sys-boot/limine:gnu - Use GCC for building
 sys-boot/limine:uefi32 - Build the IA-32 UEFI port
 sys-boot/limine:uefi64 - Build the x86-64 UEFI port
 sys-boot/limine:uefiaa64 - Build the aarch64 UEFI port
-x11-themes/arc-theme:cinnamon - Build Cinnamon theme
-x11-themes/arc-theme:gnome-shell - Build GNOME Shell theme
-x11-themes/arc-theme:gtk2 - Build and install the GTK2 theme
-x11-themes/arc-theme:gtk3 - Build and install the GTK3 theme
-x11-themes/arc-theme:gtk4 - Build and install the GTK4 theme
-x11-themes/arc-theme:transparency - Use transparent elements
-x11-themes/arc-theme:xfce - Build XFCE theme
