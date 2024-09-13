@@ -11,29 +11,15 @@ HOMEPAGE="
 	https://gendesk.roboticoverlords.org
 "
 
-if [[ ${PV} == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/xyproto/${PN}"
-else
-	SRC_URI="https://github.com/xyproto/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-	S="${WORKDIR}/${P}"
-	KEYWORDS="~amd64"
-fi
+SRC_URI="https://github.com/xyproto/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/${P}"
 
 LICENSE="BSD"
 SLOT="0"
+KEYWORDS="~amd64"
 IUSE="man"
 
 RESTRICT="mirror"
-
-src_unpack() {
-	if [[ ${PV} == 9999 ]]; then
-		git-r3_src_unpack		|| die
-		go-module_src_unpack	|| die
-	else
-		go-module_src_unpack	|| die
-	fi
-}
 
 src_compile() {
 	ego build -mod=vendor -v -trimpath
