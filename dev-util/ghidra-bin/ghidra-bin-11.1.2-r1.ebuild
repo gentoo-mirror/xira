@@ -53,7 +53,8 @@ src_prepare() {
 		--name="${MY_PN^}"			\
 		--comment="${DESCRIPTION}"	\
 		--exec="${MY_PN}-gui"		\
-		--icon="${MY_PN}"
+		--icon="${MY_PN}"			\
+		--categories="Utility"
 	mv "${S}"/ghidra.desktop "${S}"/${PN}.desktop
 	elog "Desktop file generated."
 
