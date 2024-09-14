@@ -3,12 +3,12 @@
 
 EAPI=8
 
-inherit xdg-utils desktop savedconfig
+inherit xdg desktop savedconfig
 
-DESCRIPTION="Ghidra is a software reverse engineering (SRE) framework"
+DESCRIPTION="Software reverse engineering (SRE) framework"
 HOMEPAGE="https://nsa.gov/ghidra"
 
-DATE="20240410"
+DATE="20240709"
 MY_PN="ghidra"
 MY_PV="${PV}_PUBLIC_${DATE}"
 MY_P="${MY_PN}_${MY_PV}"
@@ -30,6 +30,7 @@ BDEPEND="
 	media-gfx/imagemagick
 	sys-apps/coreutils
 	sys-apps/findutils
+	sys-apps/gendesk
 	sys-apps/grep
 	sys-apps/sed
 "
@@ -46,8 +47,17 @@ src_prepare() {
 		ewarn	"affect the decompiler."
 	fi
 
-	default
+	elog "Generating desktop file with gendesk"
+	gendesk -f -n \
+		--pkgname="${PN}"			\
+		--name="${MY_PN^}"			\
+		--comment="${DESCRIPTION}"	\
+		--exec="${MY_PN}-gui"		\
+		--icon="${MY_PN}"
+	mv "${S}"/ghidra.desktop "${S}"/${PN}.desktop
+	elog "Desktop file generated."
 
+	default
 	restore_config support/launch.properties
 }
 
@@ -76,7 +86,7 @@ src_install() {
 		mkdir -p "${ED}/usr/share/icons/hicolor/${i}x${i}/apps/"	|| die
 		cp "${S}/icon_app${i}.png" "${ED}/usr/share/icons/hicolor/${i}x${i}/apps/${MY_PN}.png"	|| die
 	done
-	domenu "${FILESDIR}/${MY_PN}.desktop"
+	domenu "${S}/${PN}.desktop"
 
 	# Is this really the best solution...? >~>
 	einfo "Finding all ELF files and running \`chmod\` on them, this can take a while."
