@@ -13,4 +13,4 @@ RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.1.2_build/ghidra_11.1.2_PUBLIC_20240709.zip -> ghidra-bin-11.1.2.zip
 _eclasses_=xdg-utils	5465aed08f1dfc2a75f14cbea4272961	xdg	8d7d90c01b1b1c2602dab6fc6b177097	desktop	56973babb9c5f19cab0eeb53ece644c6	portability	01f478fa22185b3606f2d4adea4675ed	savedconfig	b9131abe556ad2ea96c01b06d658d363
-_md5_=ef6ea5c83671b4e542ffee18f5f70634
+_md5_=13fd6350126c4543761522f36130f2b0
