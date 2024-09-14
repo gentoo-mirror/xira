@@ -7,4 +7,4 @@ LICENSE=GPL-2+ GPL-3
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://sm.alliedmods.net/smdrop/1.11/sourcemod-1.11.0-git6968-linux.tar.gz -> spcomp-bin-1.11.6968.tar.gz
-_md5_=e5bea4856e170a620754df193c3a4d8a
+_md5_=baee7ad2604e43240b0cfc4ab9eeaa6e

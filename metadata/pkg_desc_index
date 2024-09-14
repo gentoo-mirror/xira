@@ -25,12 +25,12 @@ gui-apps/video-trimmer 0.8.2-r2: Trim videos quickly
 gui-apps/wl-clip-persist 0.3.1: Keep Wayland clipboard after programs close
 media-fonts/inter 4.0-r2: The Inter font family
 media-fonts/noto-emoji 999999999: An open source emoji font from Google
-media-gfx/gmic 3.3.5-r100: GREYC's Magic Image Converter
+media-gfx/gmic 3.3.5-r101: GREYC's Magic Image Converter
 media-gfx/processing-bin 4.3: Visual context programming language
 media-video/celluloid 0.27-r2: A simple GTK+ frontend for mpv
 media-video/natron-bin 2.5.0: Node-graph based open-source compositing software
 media-video/natron-plugins 9999: Natron Community Plugins
-sys-apps/gendesk 1.0.9 9999: Generate .desktop files from the terminal
+sys-apps/gendesk 1.0.10-r2: Generate .desktop files from the terminal
 sys-block/hddrand 20230116-r2: Drive wipe/verification and benchmarking tool
 sys-boot/limine 5.20230819.0: A modern, advanced, portable, multiprotocol bootloader
 www-apps/airlift-bin 0.4.1: A self-hosted file upload and sharing service

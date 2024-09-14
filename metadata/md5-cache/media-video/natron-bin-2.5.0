@@ -12,4 +12,4 @@ RESTRICT=mirror strip
 SLOT=0
 SRC_URI=https://github.com/NatronGitHub/Natron/releases/download/v2.5.0/Natron-2.5.0-Linux-x86_64-no-installer.tar.xz -> natron-bin-2.5.0.tar.xz
 _eclasses_=xdg-utils	5465aed08f1dfc2a75f14cbea4272961
-_md5_=5d7703ea720bbbff9ec0bd2c89a32b79
+_md5_=bb6fe530275dc98fb5bff8b7cb035199
