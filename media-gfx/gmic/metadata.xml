@@ -6,9 +6,9 @@
 		<name>Kirin Etheridge</name>
 	</maintainer>
 	<use>
-        <flag name="cli">Enable G'Mic CLI</flag>
-        <flag name="gimp3">Enable GIMP 3 support (Only for X11)</flag>
-        <flag name="opencv">Enable OpenCV support</flag>
+		<flag name="cli">Enable G'Mic CLI</flag>
+		<flag name="gimp3">Enable GIMP 3 support (Only for X11)</flag>
+		<flag name="opencv">Enable OpenCV support</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">GreycLab/gmic</remote-id>

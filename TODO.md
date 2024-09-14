@@ -2,7 +2,7 @@
 <p align="center"<i><sub>2024-09-02</sub></i></p>
 
 ### Documentation
-- [ ] README.md: Explain which ebuilds require the GURU overlay, check if at all.
+- [x] README.md: Explain which ebuilds require the GURU overlay, check if at all.
 
 ### Sets
 - [ ] Remove openwrt-prequisites; I am not a fan of installing software I'll use once.\
