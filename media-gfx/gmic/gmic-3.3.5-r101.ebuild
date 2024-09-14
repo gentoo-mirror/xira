@@ -17,9 +17,12 @@ SRC_URI="https://github.com/GreycLab/gmic/archive/v.${PV}.tar.gz -> ${P}.tar.gz
 	gimp? ( ${GMIC_QT_URI} )
 	gui? ( ${GMIC_QT_URI} )
 "
-KEYWORDS="~amd64 ~x86"
+GMIC_QT_DIR="gmic-qt-v.${PV}"
+S="${WORKDIR}/${PN}-v.${PV}"
+
 LICENSE="CeCILL-2 GPL-3"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE="bash-completion +cli ffmpeg fftw gimp gimp3 graphicsmagick gui jpeg opencv openexr openmp png static-libs tiff X"
 REQUIRED_USE="
 	|| ( cli gimp gui )
@@ -41,7 +44,7 @@ COMMON_DEPEND="
 		${QT_DEPS}
 	)
 	gimp3? (
-		=media-gfx/gimp-2.99.18
+		~media-gfx/gimp-2.99.18
 		${QT_DEPS}
 	)
 	graphicsmagick? ( media-gfx/graphicsmagick:0= )
@@ -71,9 +74,6 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 "
 
-GMIC_QT_DIR="gmic-qt-v.${PV}"
-S="${WORKDIR}/${PN}-v.${PV}"
-
 pkg_pretend() {
 	if use openmp ; then
 		tc-check-openmp
@@ -101,7 +101,7 @@ src_prepare() {
 		patch -p1 -i "${FILESDIR}/gmic-3.2.0-system-gmic.patch" || die
 		if use gimp3 ; then
 			patch -p1 -i "${FILESDIR}/gimp-3-functions.patch"
-			pushd ${WORKDIR}
+			pushd "${WORKDIR}"
 				patch -p1 -i "${FILESDIR}/gimp-3-setup.patch"
 			popd
 		fi

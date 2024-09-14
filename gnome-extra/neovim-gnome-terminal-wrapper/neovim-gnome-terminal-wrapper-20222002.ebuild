@@ -16,7 +16,6 @@ MY_P="${PN}-${GIT_COMMIT}"
 SRC_URI="${REPO_URI}/archive/${GIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/${MY_P}"
 
-
 LICENSE="GPL-3"
 SLOT="0"
 

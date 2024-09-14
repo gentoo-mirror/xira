@@ -6,6 +6,6 @@
 		<name>Kirin Etheridge</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">xyproto/gendesk</remote-id>
+		<remote-id type="github">mqudsi/hddrand</remote-id>
 	</upstream>
 </pkgmetadata>

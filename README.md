@@ -37,7 +37,9 @@ Ebuilds I have copied from e.g. the main repository preserve their original GPLv
 
 ### Requirements
 - GURU Overlay
-    - Some ebuilds might have dependencies that exist only in the GURU overlay. [//]: # (TODO: Explain which ebuilds require this, please.)
+    - The following ebuilds contain depends already existing in GURU:
+        - gui-apps/gradience (dep: dev-python/material-color-utilities)
+
 #### Recommendations
 - LLVM profile
     - Best is to install using the LLVM stage3.

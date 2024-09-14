@@ -13,10 +13,11 @@ SRC_URI="
 	https://sm.alliedmods.net/smdrop/${MAJ_VER}/sourcemod-${MAJ_VER}.${MIN_VER}-git${GITREV}-linux.tar.gz -> ${P}.tar.gz
 	"
 S="${WORKDIR}"
-KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-2+ GPL-3"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
+
 RESTRICT="mirror"
 
 src_unpack() {
